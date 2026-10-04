@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 
 REGIAO = sys.argv[1] if len(sys.argv) > 1 else "norte"
-REGIOES = {"norte": "ac,am,ap,pa,ro,rr,to", "nordeste": "al,ba,ce,ma,pb,pe,pi,rn,se"}
+REGIOES = {"norte": "ac,am,ap,pa,ro,rr,to", "nordeste": "al,ba,ce,ma,pb,pe,pi,rn,se", "top10": "sp,mg,rj,ba,rs,pr,pe,ce,pa,sc"}
 UFS = (sys.argv[2] if len(sys.argv) > 2 else REGIOES[REGIAO]).split(",")
 BASE = "https://resultados.tse.jus.br/oficial/ele2026/6257/dados"
 AQUI = os.path.dirname(os.path.abspath(__file__))
