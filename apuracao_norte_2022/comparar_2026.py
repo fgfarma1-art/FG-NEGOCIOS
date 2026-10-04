@@ -7,6 +7,7 @@ Cada execução acrescenta uma linha por UF em historico_2026_<regiao>.csv e imp
 import json, sys, urllib.request, os
 from datetime import datetime, timedelta
 import pandas as pd
+from corte2022 import secoes_ate
 
 REGIAO = sys.argv[1] if len(sys.argv) > 1 else "norte"
 REGIOES = {"norte": "ac,am,ap,pa,ro,rr,to", "nordeste": "al,ba,ce,ma,pb,pe,pi,rn,se", "top10": "sp,mg,rj,ba,rs,pr,pe,ce,pa,sc"}
@@ -38,8 +39,7 @@ inst = datetime.strptime(atual.gerado_em.iloc[0], "%d/%m/%Y %H:%M:%S")  # horár
 
 # --- 2022 no mesmo horário do dia (hora de Brasília) ---
 s22 = pd.read_csv(f"{AQUI}/secoes_{REGIAO}_1t_2022.csv.gz", parse_dates=["recebido"])
-corte = datetime(2022, 10, 2, inst.hour, inst.minute, inst.second)
-r = s22[s22.recebido <= corte]
+r = secoes_ate(s22, atual[["uf", "gerado_em"]])  # cada UF cortada no horário do seu arquivo
 c22 = r.groupby("uf")[["lula", "bolsonaro", "outros"]].sum()
 c22["secoes_apuradas_2022"] = r.groupby("uf").size()
 c22["total_2022"] = s22.groupby("uf").size()
@@ -55,7 +55,8 @@ tot_row = pd.DataFrame([dict(gerado_em=atual.gerado_em.iloc[0], uf=REGIAO.upper(
 atual = pd.concat([atual, tot_row], ignore_index=True)
 atual.to_csv(HIST, mode="a", header=not os.path.exists(HIST), index=False)
 
-print(f"Instante: {inst:%d/%m/%Y %H:%M:%S} (Brasília)  |  2022 cortado em {corte:%H:%M:%S}")
+horas = sorted(set(atual.gerado_em.str[-8:].iloc[:-1]))
+print(f"Arquivos 2026 gerados entre {horas[0]} e {horas[-1]} (Brasília); cada UF de 2022 cortada no horário do seu arquivo")
 out = pd.DataFrame({"uf": atual.uf, "seções 2026 %": atual.pct_secoes}).set_index("uf")
 out["seções 2022 %"] = c22.pct_secoes_2022
 for k in ["v_LULA", "v_FLAVIO BOLSONARO"]:

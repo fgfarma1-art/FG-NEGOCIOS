@@ -2,6 +2,7 @@
 import os
 from datetime import datetime
 import numpy as np, pandas as pd
+from corte2022 import secoes_ate
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -12,7 +13,7 @@ h = pd.read_csv(f"{AQUI}/historico_2026_top10.csv")
 u = h.tail(11).set_index("uf")  # última rodada: 10 UFs + linha TOP10
 inst = datetime.strptime(u.loc["SP"].gerado_em, "%d/%m/%Y %H:%M:%S")
 s22 = pd.read_csv(f"{AQUI}/secoes_top10_1t_2022.csv.gz", parse_dates=["recebido"])
-r = s22[s22.recebido <= datetime(2022, 10, 2, inst.hour, inst.minute, inst.second)]
+r = secoes_ate(s22, u.drop("TOP10").reset_index()[["uf", "gerado_em"]])
 g = r.groupby("uf")[["lula", "bolsonaro", "outros"]].sum()
 ordem = ["SP", "MG", "RJ", "BA", "RS", "PR", "PE", "CE", "PA", "SC"]
 L = pd.DataFrame(index=ordem)

@@ -1,6 +1,7 @@
 """Projeção SIMPLES: aplica ao placar de 2026 o quanto o placar de cada estado mudou em 2022
 entre este mesmo horário e o fim da apuração. Pressupõe a mesma ordem de chegada das urnas de 2022."""
 import pandas as pd
+from corte2022 import secoes_ate
 from datetime import datetime
 AQUI = __file__.rsplit("/", 1)[0]
 h = pd.read_csv(f"{AQUI}/historico_2026_top10.csv").tail(11).set_index("uf")
@@ -10,7 +11,7 @@ corte = datetime(2022, 10, 2, inst.hour, inst.minute, inst.second)
 def pct(d):
     g = d.groupby("uf")[["lula", "bolsonaro", "outros"]].sum(); v = g.sum(axis=1)
     return g.div(v, axis=0) * 100, g.sum(axis=1)
-agora22, _ = pct(s[s.recebido <= corte]); final22, vot22 = pct(s)
+agora22, _ = pct(secoes_ate(s, h.drop("TOP10").reset_index()[["uf", "gerado_em"]])); final22, vot22 = pct(s)
 linhas = []
 for uf in ["SP", "MG", "RJ", "BA", "RS", "PR", "PE", "CE", "PA", "SC"]:
     r = h.loc[uf]; vv = r.votos_validos

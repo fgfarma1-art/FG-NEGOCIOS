@@ -2,6 +2,7 @@
 import os, sys
 from datetime import datetime
 import pandas as pd
+from corte2022 import secoes_ate
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -15,7 +16,8 @@ def dados(regiao):
     ult = h[h.gerado_em == h.gerado_em.iloc[-1]].set_index("uf").loc[regiao.upper()]
     inst = datetime.strptime(ult.gerado_em, "%d/%m/%Y %H:%M:%S")
     s22 = pd.read_csv(f"{AQUI}/secoes_{regiao}_1t_2022.csv.gz", parse_dates=["recebido"])
-    r = s22[s22.recebido <= datetime(2022, 10, 2, inst.hour, inst.minute, inst.second)]
+    ufs = h.tail(s22.uf.nunique() + 1); ufs = ufs[ufs.uf != regiao.upper()]
+    r = secoes_ate(s22, ufs)
     val = r.lula.sum() + r.bolsonaro.sum() + r.outros.sum()
     return dict(inst=inst, p26=ult.pct_secoes, p22=len(r) / len(s22) * 100,
                 l26=ult["v_LULA"] / ult.votos_validos * 100, b26=ult["v_FLAVIO BOLSONARO"] / ult.votos_validos * 100,
