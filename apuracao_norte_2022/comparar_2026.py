@@ -2,16 +2,18 @@
 
 2026: JSON oficial do TSE (resultados.tse.jus.br/oficial/ele2026/6257/dados/<uf>/<uf>-c0001-e006257-u.json).
 2022: secoes_norte_1t_2022.csv.gz (gerado por apuracao_por_hora.py), com o horário de recebimento de cada BU.
-Cada execução acrescenta uma linha por UF em historico_2026.csv e imprime o comparativo da execução.
+Cada execução acrescenta uma linha por UF em historico_2026_<regiao>.csv e imprime o comparativo da execução.
 """
 import json, sys, urllib.request, os
 from datetime import datetime, timedelta
 import pandas as pd
 
-UFS = ["ac", "am", "ap", "pa", "ro", "rr", "to"]
+REGIAO = sys.argv[1] if len(sys.argv) > 1 else "norte"
+REGIOES = {"norte": "ac,am,ap,pa,ro,rr,to", "nordeste": "al,ba,ce,ma,pb,pe,pi,rn,se"}
+UFS = (sys.argv[2] if len(sys.argv) > 2 else REGIOES[REGIAO]).split(",")
 BASE = "https://resultados.tse.jus.br/oficial/ele2026/6257/dados"
 AQUI = os.path.dirname(os.path.abspath(__file__))
-HIST = f"{AQUI}/historico_2026.csv"
+HIST = f"{AQUI}/historico_2026_{REGIAO}.csv"
 
 def baixa(uf):
     req = urllib.request.Request(f"{BASE}/{uf}/{uf}-c0001-e006257-u.json", headers={"User-Agent": "Mozilla/5.0"})
@@ -35,13 +37,13 @@ atual = pd.DataFrame(linhas)
 inst = datetime.strptime(atual.gerado_em.iloc[0], "%d/%m/%Y %H:%M:%S")  # horário de Brasília
 
 # --- 2022 no mesmo horário do dia (hora de Brasília) ---
-s22 = pd.read_csv(f"{AQUI}/secoes_norte_1t_2022.csv.gz", parse_dates=["recebido"])
+s22 = pd.read_csv(f"{AQUI}/secoes_{REGIAO}_1t_2022.csv.gz", parse_dates=["recebido"])
 corte = datetime(2022, 10, 2, inst.hour, inst.minute, inst.second)
 r = s22[s22.recebido <= corte]
 c22 = r.groupby("uf")[["lula", "bolsonaro", "outros"]].sum()
 c22["secoes_apuradas_2022"] = r.groupby("uf").size()
 c22["total_2022"] = s22.groupby("uf").size()
-c22.loc["NORTE"] = list(c22[["lula", "bolsonaro", "outros"]].sum()) + [c22.secoes_apuradas_2022.sum(), c22.total_2022.sum()]
+c22.loc[REGIAO.upper()] = list(c22[["lula", "bolsonaro", "outros"]].sum()) + [c22.secoes_apuradas_2022.sum(), c22.total_2022.sum()]
 c22["pct_secoes_2022"] = (c22.secoes_apuradas_2022 / c22.total_2022 * 100).round(2)
 c22["lula_pct_2022"] = (c22.lula / (c22.lula + c22.bolsonaro + c22.outros) * 100).round(2)
 c22["bolso_pct_2022"] = (c22.bolsonaro / (c22.lula + c22.bolsonaro + c22.outros) * 100).round(2)
@@ -49,7 +51,7 @@ c22["bolso_pct_2022"] = (c22.bolsonaro / (c22.lula + c22.bolsonaro + c22.outros)
 # --- 2026 ---
 vc = [c for c in atual.columns if c.startswith("v_")]
 tot = atual[["secoes_total", "secoes_apuradas", "votos_validos"] + vc].sum()
-tot_row = pd.DataFrame([dict(gerado_em=atual.gerado_em.iloc[0], uf="NORTE", pct_secoes=round(tot.secoes_apuradas / tot.secoes_total * 100, 2), **tot.to_dict())])
+tot_row = pd.DataFrame([dict(gerado_em=atual.gerado_em.iloc[0], uf=REGIAO.upper(), pct_secoes=round(tot.secoes_apuradas / tot.secoes_total * 100, 2), **tot.to_dict())])
 atual = pd.concat([atual, tot_row], ignore_index=True)
 atual.to_csv(HIST, mode="a", header=not os.path.exists(HIST), index=False)
 
