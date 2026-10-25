@@ -47,7 +47,7 @@ def git_push():
     except Exception as e:
         print(f"[aviso] commit/push falhou: {str(e)[:80]}", flush=True)
 
-ultimo = None; ultimo_nac = None; sem_mudanca = 0; ciclo = 0; ultimo_uf = {}; cache = {}
+ultimo = None; ultima_dif = None; ultimo_nac = None; sem_mudanca = 0; ciclo = 0; ultimo_uf = {}; cache = {}
 while True:
     t0 = time.time(); agora = datetime.now(ZoneInfo("America/Sao_Paulo")).strftime("%H:%M:%S")
     NAC = baixa("BR"); R = []
@@ -76,13 +76,15 @@ while True:
         if mudou or sem_mudanca >= 4:
             ritmo = f" | nacional {NAC['st'] - ultimo_nac:+,} seções no minuto".replace(",", ".") if (ultimo and "erro" not in NAC and ultimo_nac is not None) else ""
             lider = "Lula" if L > F else "Flávio"
+            # linha compacta: só a diferença entre os dois (fonte principal = arquivo nacional do TSE)
             if "erro" not in NAC and NAC["vv"]:
-                nac = f"TSE nacional {NAC['hg']}: seções {NAC['st']:,}/{NAC['ts']:,} = {NAC['st']/NAC['ts']*100:.2f}% | Lula {NAC['lula']/NAC['vv']*100:.2f}% ({NAC['lula']:,}) x Flávio {NAC['fla']/NAC['vv']*100:.2f}% ({NAC['fla']:,}) | {'Lula' if NAC['lula']>NAC['fla'] else 'Flávio'} +{abs(NAC['lula']-NAC['fla']):,}"
+                dif, pct_s, vvn = NAC["lula"] - NAC["fla"], NAC["st"] / NAC["ts"] * 100, NAC["vv"]; hora = NAC["hg"]; fonte = ""
             else:
-                nac = "TSE nacional indisponível"
-            print((f"{agora} {nac} || soma dos estados (arq. até {hmax}): {int(sec26):,} seções = {sec26/tot26*100:.2f}%, Lula {L/vv*100:.2f}% x Flávio {F/vv*100:.2f}% | "
-                   f"2022 no mesmo horário: {sec22/tot22*100:.2f}% das seções, Lula {L22/v22*100:.2f}% x Bolsonaro {B22/v22*100:.2f}%{ritmo}").replace(",", ".")
-                  + (f" | sem resposta (valor anterior mantido): {','.join(falhas)}" if falhas else ""), flush=True)
+                dif, pct_s, vvn = int(L - F), sec26 / tot26 * 100, vv; hora = hmax; fonte = " (soma dos estados; arquivo nacional indisponível)"
+            quem = "Lula" if dif > 0 else "Flávio"; var = dif - ultima_dif if ultima_dif is not None else None
+            print((f"{hora[:5]} {quem} +{abs(dif):,} votos ({abs(dif)/vvn*100:.2f} pp) | {pct_s:.1f}% apurado"
+                   + (f" | {var:+,} votos vs. minuto anterior".replace("+-", "-") if var is not None else "") + fonte).replace(",", "."), flush=True)
+            ultima_dif = dif
             sem_mudanca = 0
         else:
             sem_mudanca += 1
