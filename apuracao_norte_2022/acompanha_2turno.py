@@ -45,11 +45,15 @@ def git_push():
     except Exception as e:
         print(f"[aviso] commit/push falhou: {str(e)[:80]}", flush=True)
 
-ultimo = None; sem_mudanca = 0; ciclo = 0; ultimo_uf = {}
+ultimo = None; sem_mudanca = 0; ciclo = 0; ultimo_uf = {}; cache = {}
 while True:
     t0 = time.time(); agora = datetime.now(ZoneInfo("America/Sao_Paulo")).strftime("%H:%M:%S")
     with ThreadPoolExecutor(8) as ex: R = list(ex.map(baixa, UFS))
-    ok = [r for r in R if "erro" not in r]; falhas = [r["uf"] for r in R if "erro" in r]
+    falhas = [r["uf"] for r in R if "erro" in r]
+    for r in R:
+        if "erro" not in r: cache[r["uf"]] = r
+    R = [r if "erro" not in r else cache.get(r["uf"], r) for r in R]   # falha de rede: mantém o último valor conhecido da UF
+    ok = [r for r in R if "erro" not in r]
     if len(ok) >= 20:
         D = pd.DataFrame(ok)
         sec26, tot26, vv, L, F = D.st.sum(), D.ts.sum(), D.vv.sum(), D.lula.sum(), D.fla.sum()
@@ -59,18 +63,18 @@ while True:
         row = dict(coletado_em=agora, arquivos_ate=hmax, secoes=int(sec26), total_secoes=int(tot26), pct_secoes=round(sec26 / tot26 * 100, 3), validos=int(vv),
                    lula=int(L), flavio=int(F), lula_pct=round(L / vv * 100, 3) if vv else None, flavio_pct=round(F / vv * 100, 3) if vv else None,
                    margem_lula_menos_flavio=int(L - F), pct_secoes_2022=round(sec22 / tot22 * 100, 3), lula_pct_2022=round(L22 / v22 * 100, 3) if v22 else None,
-                   bolsonaro_pct_2022=round(B22 / v22 * 100, 3) if v22 else None, ufs_ok=len(ok))
+                   bolsonaro_pct_2022=round(B22 / v22 * 100, 3) if v22 else None, ufs_ok=len(ok) - len(falhas))
         mudou = chave != ultimo
         pd.DataFrame([row]).to_csv(H_NAC, mode="a", header=not os.path.exists(H_NAC), index=False)
         novas = [r for r in ok if ultimo_uf.get(r["uf"]) != (r["hg"], r["st"], r["lula"], r["fla"])]
         for r in novas: ultimo_uf[r["uf"]] = (r["hg"], r["st"], r["lula"], r["fla"])
         if novas: pd.DataFrame(novas).assign(coletado_em=agora).to_csv(H_UF, mode="a", header=not os.path.exists(H_UF), index=False)
         if mudou or sem_mudanca >= 4:
-            ritmo = f" | +{int(sec26 - (ultimo[0] if ultimo else 0)):,} seções".replace(",", ".") if ultimo else ""
+            ritmo = f" | {int(sec26 - (ultimo[0] if ultimo else 0)):+,} seções".replace(",", ".") if ultimo else ""
             lider = "Lula" if L > F else "Flávio"
             print(f"{agora} (arq. até {hmax}) seções {int(sec26):,}/{int(tot26):,} = {sec26/tot26*100:.2f}% [2022 mesmo horário: {sec22/tot22*100:.2f}%] | "
                   f"Lula {L/vv*100:.2f}% ({int(L):,}) x Flávio {F/vv*100:.2f}% ({int(F):,}) | {lider} +{abs(int(L-F)):,} | 2022: Lula {L22/v22*100:.2f}% x Bolsonaro {B22/v22*100:.2f}%{ritmo}"
-                  .replace(",", ".") + (f" | falhas: {','.join(falhas)}" if falhas else ""), flush=True)
+                  .replace(",", ".") + (f" | sem resposta (valor anterior mantido): {','.join(falhas)}" if falhas else ""), flush=True)
             sem_mudanca = 0
         else:
             sem_mudanca += 1
