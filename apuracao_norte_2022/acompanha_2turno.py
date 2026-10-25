@@ -21,15 +21,17 @@ S22_UF = {u: g.sort_values("recebido") for u, g in S22.groupby("uf")}
 TOT22 = S22.groupby("uf").size().to_dict()
 
 def baixa(uf):
-    for t in range(3):
+    """uf = sigla ou 'BR' (arquivo nacional). Tenta até 6 vezes, com espera crescente (o TSE responde 429 quando há rajada)."""
+    pasta = uf.lower(); err = ""
+    for t in range(6):
         try:
-            q = urllib.request.Request(f"https://resultados.tse.jus.br/oficial/ele2026/6258/dados/{uf.lower()}/{uf.lower()}-c0001-e006258-u.json", headers={"User-Agent": "Mozilla/5.0"})
+            q = urllib.request.Request(f"https://resultados.tse.jus.br/oficial/ele2026/6258/dados/{pasta}/{pasta}-c0001-e006258-u.json", headers={"User-Agent": "Mozilla/5.0"})
             d = json.load(urllib.request.urlopen(q, timeout=25))
             c = {k["n"]: int(k["vap"]) for ag in d["carg"][0]["agr"] for p in ag["par"] for k in p["cand"]}
             return dict(uf=uf, hg=d["hg"], dg=d["dg"], st=int(d["s"]["st"]), ts=int(d["s"]["ts"]), vv=int(d["v"]["vv"]), lula=c.get("13", 0), fla=c.get("22", 0),
                         br=int(d["v"]["vb"]), nu=int(d["v"]["tvn"]), comp=int(d["e"]["c"]), aptos=int(d["e"]["te"]))
         except Exception as e:
-            err = str(e)[:60]; time.sleep(2)
+            err = str(e)[:60]; time.sleep(1.5 * (t + 1))
     return dict(uf=uf, erro=err)
 
 def corte22(uf, hg):
@@ -48,7 +50,9 @@ def git_push():
 ultimo = None; sem_mudanca = 0; ciclo = 0; ultimo_uf = {}; cache = {}
 while True:
     t0 = time.time(); agora = datetime.now(ZoneInfo("America/Sao_Paulo")).strftime("%H:%M:%S")
-    with ThreadPoolExecutor(8) as ex: R = list(ex.map(baixa, UFS))
+    NAC = baixa("BR"); R = []
+    for u in UFS:
+        R.append(baixa(u)); time.sleep(0.2)
     falhas = [r["uf"] for r in R if "erro" in r]
     for r in R:
         if "erro" not in r: cache[r["uf"]] = r
@@ -60,7 +64,7 @@ while True:
         c22 = [corte22(r["uf"], r["hg"]) for r in ok]; sec22 = sum(a for a, _, _ in c22); L22 = sum(b for _, b, _ in c22); B22 = sum(c for _, _, c in c22)
         v22 = L22 + B22; tot22 = sum(TOT22[r["uf"]] for r in ok)
         hmax = max(D.hg); chave = (int(sec26), int(L), int(F))
-        row = dict(coletado_em=agora, arquivos_ate=hmax, secoes=int(sec26), total_secoes=int(tot26), pct_secoes=round(sec26 / tot26 * 100, 3), validos=int(vv),
+        row = dict(coletado_em=agora, arquivos_ate=hmax, tse_nacional_hg=NAC.get('hg'), tse_nacional_secoes=NAC.get('st'), tse_nacional_validos=NAC.get('vv'), tse_nacional_lula=NAC.get('lula'), tse_nacional_flavio=NAC.get('fla'), secoes=int(sec26), total_secoes=int(tot26), pct_secoes=round(sec26 / tot26 * 100, 3), validos=int(vv),
                    lula=int(L), flavio=int(F), lula_pct=round(L / vv * 100, 3) if vv else None, flavio_pct=round(F / vv * 100, 3) if vv else None,
                    margem_lula_menos_flavio=int(L - F), pct_secoes_2022=round(sec22 / tot22 * 100, 3), lula_pct_2022=round(L22 / v22 * 100, 3) if v22 else None,
                    bolsonaro_pct_2022=round(B22 / v22 * 100, 3) if v22 else None, ufs_ok=len(ok) - len(falhas))
@@ -72,9 +76,13 @@ while True:
         if mudou or sem_mudanca >= 4:
             ritmo = f" | {int(sec26 - (ultimo[0] if ultimo else 0)):+,} seções".replace(",", ".") if ultimo else ""
             lider = "Lula" if L > F else "Flávio"
-            print(f"{agora} (arq. até {hmax}) seções {int(sec26):,}/{int(tot26):,} = {sec26/tot26*100:.2f}% [2022 mesmo horário: {sec22/tot22*100:.2f}%] | "
-                  f"Lula {L/vv*100:.2f}% ({int(L):,}) x Flávio {F/vv*100:.2f}% ({int(F):,}) | {lider} +{abs(int(L-F)):,} | 2022: Lula {L22/v22*100:.2f}% x Bolsonaro {B22/v22*100:.2f}%{ritmo}"
-                  .replace(",", ".") + (f" | sem resposta (valor anterior mantido): {','.join(falhas)}" if falhas else ""), flush=True)
+            if "erro" not in NAC and NAC["vv"]:
+                nac = f"TSE nacional {NAC['hg']}: seções {NAC['st']:,}/{NAC['ts']:,} = {NAC['st']/NAC['ts']*100:.2f}% | Lula {NAC['lula']/NAC['vv']*100:.2f}% ({NAC['lula']:,}) x Flávio {NAC['fla']/NAC['vv']*100:.2f}% ({NAC['fla']:,}) | {'Lula' if NAC['lula']>NAC['fla'] else 'Flávio'} +{abs(NAC['lula']-NAC['fla']):,}"
+            else:
+                nac = "TSE nacional indisponível"
+            print((f"{agora} {nac} || soma dos estados (arq. até {hmax}): {int(sec26):,} seções = {sec26/tot26*100:.2f}%, Lula {L/vv*100:.2f}% x Flávio {F/vv*100:.2f}% | "
+                   f"2022 no mesmo horário: {sec22/tot22*100:.2f}% das seções, Lula {L22/v22*100:.2f}% x Bolsonaro {B22/v22*100:.2f}%{ritmo}").replace(",", ".")
+                  + (f" | sem resposta (valor anterior mantido): {','.join(falhas)}" if falhas else ""), flush=True)
             sem_mudanca = 0
         else:
             sem_mudanca += 1
