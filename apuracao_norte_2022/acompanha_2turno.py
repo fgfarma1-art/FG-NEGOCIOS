@@ -47,7 +47,7 @@ def git_push():
     except Exception as e:
         print(f"[aviso] commit/push falhou: {str(e)[:80]}", flush=True)
 
-ultimo = None; sem_mudanca = 0; ciclo = 0; ultimo_uf = {}; cache = {}
+ultimo = None; ultimo_nac = None; sem_mudanca = 0; ciclo = 0; ultimo_uf = {}; cache = {}
 while True:
     t0 = time.time(); agora = datetime.now(ZoneInfo("America/Sao_Paulo")).strftime("%H:%M:%S")
     NAC = baixa("BR"); R = []
@@ -74,7 +74,7 @@ while True:
         for r in novas: ultimo_uf[r["uf"]] = (r["hg"], r["st"], r["lula"], r["fla"])
         if novas: pd.DataFrame(novas).assign(coletado_em=agora).to_csv(H_UF, mode="a", header=not os.path.exists(H_UF), index=False)
         if mudou or sem_mudanca >= 4:
-            ritmo = f" | {int(sec26 - (ultimo[0] if ultimo else 0)):+,} seções".replace(",", ".") if ultimo else ""
+            ritmo = f" | nacional {NAC['st'] - ultimo_nac:+,} seções no minuto".replace(",", ".") if (ultimo and "erro" not in NAC and ultimo_nac is not None) else ""
             lider = "Lula" if L > F else "Flávio"
             if "erro" not in NAC and NAC["vv"]:
                 nac = f"TSE nacional {NAC['hg']}: seções {NAC['st']:,}/{NAC['ts']:,} = {NAC['st']/NAC['ts']*100:.2f}% | Lula {NAC['lula']/NAC['vv']*100:.2f}% ({NAC['lula']:,}) x Flávio {NAC['fla']/NAC['vv']*100:.2f}% ({NAC['fla']:,}) | {'Lula' if NAC['lula']>NAC['fla'] else 'Flávio'} +{abs(NAC['lula']-NAC['fla']):,}"
@@ -86,7 +86,7 @@ while True:
             sem_mudanca = 0
         else:
             sem_mudanca += 1
-        ultimo = chave
+        ultimo = chave; ultimo_nac = NAC.get('st') if 'erro' not in NAC else ultimo_nac
         if sec26 / tot26 >= 0.9995 and not mudou: print(f"{agora} apuração praticamente concluída ({sec26/tot26*100:.3f}%). Encerrando acompanhamento.", flush=True); git_push(); break
     else:
         print(f"{agora} [aviso] só {len(ok)} UFs responderam: {falhas[:6]}", flush=True)
