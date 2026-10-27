@@ -1,0 +1,8 @@
+# item | quantidade unidade   (use -palavra para excluir, ex.: arroz -integral)
+arroz branco | 5 kg
+feijão carioca | 2 kg
+leite integral | 12 L
+óleo de soja | 2 un
+macarrão espaguete | 4 un
+café torrado | 1 kg
+ovos | 12 un

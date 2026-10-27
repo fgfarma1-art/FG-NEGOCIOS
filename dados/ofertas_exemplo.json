@@ -1,0 +1,34 @@
+{
+  "_aviso": "DADOS FICTÍCIOS só para demonstração. Substitua por preços reais exportados do iFood.",
+  "lojas": [
+    {"id": "alfa", "nome": "Mercado Alfa", "taxa_entrega": 7.99, "pedido_minimo": 30, "frete_gratis_acima": 120,
+     "cupom": {"codigo": "ALFA10", "tipo": "percent", "valor": 10, "minimo": 100, "teto": 20},
+     "produtos": [
+       {"nome": "Arroz Branco Tipo 1 5kg", "preco": 29.90},
+       {"nome": "Arroz Branco Tipo 1 1kg", "preco": 6.99},
+       {"nome": "Feijão Carioca 1kg", "preco": 8.49},
+       {"nome": "Leite Integral 1L", "preco": 5.29},
+       {"nome": "Óleo de Soja 900ml", "preco": 7.99},
+       {"nome": "Ovos Brancos c/12", "preco": 13.90, "categoria": "perecivel"},
+       {"nome": "Café Torrado e Moído 500g", "preco": 19.90}
+     ]},
+    {"id": "beta", "nome": "Supermercado Beta", "taxa_entrega": 4.99, "pedido_minimo": 20, "frete_gratis_acima": 80,
+     "produtos": [
+       {"nome": "Arroz Branco Tipo 1 5kg", "preco": 27.50},
+       {"nome": "Feijão Carioca 1kg", "preco": 7.89},
+       {"nome": "Leite Integral 1L", "preco": 5.69},
+       {"nome": "Óleo de Soja 900ml", "preco": 6.99},
+       {"nome": "Macarrão Espaguete 500g", "preco": 4.29},
+       {"nome": "Café Torrado e Moído 500g", "preco": 21.90}
+     ]},
+    {"id": "gama", "nome": "Atacadinho Gama", "taxa_entrega": 12.90, "pedido_minimo": 60,
+     "produtos": [
+       {"nome": "Arroz Branco Tipo 1 5kg", "preco": 25.90},
+       {"nome": "Feijão Carioca 1kg", "preco": 7.49},
+       {"nome": "Leite Integral cx 12x1L", "preco": 58.00},
+       {"nome": "Ovos Brancos c/30", "preco": 29.90, "categoria": "perecivel"},
+       {"nome": "Macarrão Espaguete 500g", "preco": 3.79},
+       {"nome": "Café Torrado e Moído 500g", "preco": 18.50}
+     ]}
+  ]
+}
