@@ -13,6 +13,22 @@ python -m agente_mercado --ofertas dados/ofertas.csv --lista minha_lista.txt --m
 python -m unittest discover -s tests -t .
 ```
 
+### Jeito rápido: painel 🛒 dentro do iFood (sem Python)
+1. Instale a extensão **Tampermonkey** no Chrome → "Criar novo script" → cole todo o conteúdo de
+   `extensao/ifood-carrinho.user.js` e salve. (Sem Tampermonkey: cole o arquivo no Console, F12, a cada página.)
+2. Abra o iFood: aparece o botão 🛒 no canto da tela. Escreva a lista uma vez (`arroz 5kg`, `leite integral 12 L`,
+   `ovos 12`, `arroz -integral 5kg`); ela fica salva.
+3. Abra cada mercado e clique **Coletar esta loja** (ele rola a página sozinho e lê os preços). Confira entrega,
+   mínimo e frete grátis, que podem ser editados na própria caixinha da loja.
+4. Clique **Montar carrinho**: mostra quanto comprar em cada loja, total, link para abrir a loja e sugestões.
+
+Tudo roda no seu navegador; nada é enviado para fora. Testes: `node tests/test_extensao.js` (paridade com o Python)
+e `node tests/test_painel.js` (painel completo no Chromium com lojas simuladas). **Ainda não foi validado contra o HTML
+real do iFood**: se o botão disser "Não achei produtos", o seletor precisa de ajuste com um exemplo real.
+
+### Alternativa: Python + CSV
+(Coleta pelo console, para usar o agente de linha de comando.)
+
 ### Como obter os preços do iFood
 O iFood não tem API pública para consumidores e raspagem automática viola os termos de uso, então a coleta
 é feita por você, com a sua sessão:
