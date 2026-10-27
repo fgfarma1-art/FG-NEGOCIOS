@@ -31,6 +31,12 @@ Uma linha por item: `arroz branco | 5 kg`. Use `-palavra` para excluir (`arroz -
 Pedido em `un` de um produto vendido em peso/volume conta como número de embalagens.
 Formato JSON também é aceito (`item`, `quantidade`, `unidade`, `excluir`, `perecivel`).
 
+### Histórico e itens recorrentes
+Com `--historico dados/historico.json` o agente grava cada execução (itens comprados e preços vistos) e passa a:
+- **avisar sobre preço**: "menor preço que já vi" ou "X% acima da média" para os produtos do carrinho (precisa de 2+ execuções anteriores);
+- **lembrar itens recorrentes**: o que você compra a cada ~N dias e já está na hora de repor. `--incluir-recorrentes`
+  adiciona esses itens à lista automaticamente; `--nao-registrar` usa o histórico sem gravar a execução.
+
 ### Como decide
 Para cada combinação de até `--max-lojas` lojas, atribui cada item à opção mais barata e refina por busca local
 considerando frete, mínimo e cupom. Uma loja extra só entra se economizar ao menos `--ganho-minimo` reais.

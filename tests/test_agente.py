@@ -1,6 +1,9 @@
+import tempfile
 import unittest
+from datetime import date
 
 from agente_mercado.carregar import carregar_lista, carregar_ofertas
+from agente_mercado import historico
 from agente_mercado.modelos import Cupom, ItemLista, Loja, Produto
 from agente_mercado.otimizador import Otimizador
 from agente_mercado.unidades import extrair_medida
@@ -58,6 +61,29 @@ class Exemplo(unittest.TestCase):
         r = Otimizador(itens, lojas).resolver()
         self.assertTrue(r.plano.valido)
         self.assertEqual(r.nao_encontrados, [])
+
+
+class Historico(unittest.TestCase):
+    def _rodar(self, caminho, preco, dia, itens):
+        loja = Loja("a", "A", 0, produtos=[prod("Arroz 5kg", preco, "a"), prod("Café 500g", 20, "a")])
+        o = Otimizador(itens, [loja])
+        r = o.resolver()
+        h = historico.carregar(caminho)
+        avisos = historico.alertas_de_preco(h, o, r)
+        historico.registrar(caminho, h, o, r, dia)
+        return avisos
+
+    def test_alerta_de_preco_e_recorrentes(self):
+        arroz = lambda: [ItemLista("arroz", 5000, "g")]
+        with tempfile.TemporaryDirectory() as d:
+            c = d + "/h.json"
+            self._rodar(c, 25, date(2026, 9, 1), arroz() + [ItemLista("cafe", 500, "g")])
+            self._rodar(c, 27, date(2026, 9, 11), arroz() + [ItemLista("cafe", 500, "g")])
+            avisos = self._rodar(c, 35, date(2026, 9, 21), arroz())
+            self.assertTrue(any("acima da média" in a for a in avisos))
+            venc = historico.recorrentes_vencidos(historico.carregar(c), arroz(), date(2026, 10, 1))
+            self.assertEqual([r[0].nome for r in venc], ["cafe"])  # a cada 10 dias, já passou
+            self.assertEqual(historico.recorrentes_vencidos(historico.carregar(c), arroz(), date(2026, 9, 15)), [])
 
 
 if __name__ == "__main__":
