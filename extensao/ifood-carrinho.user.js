@@ -310,23 +310,101 @@ else if (typeof document !== 'undefined') (() => {
     } catch (e) { aviso('Erro: ' + e.message); }
     $('col').disabled = false;
   };
-  $('lim').onclick = () => { estado.lojas = {}; salvar(); desenharLojas(); $('res').innerHTML = ''; };
+
+  // --- montar a sacola no iFood (só adiciona; nunca finaliza nem paga) ---
+  const lojaIdAtual = () => location.pathname.split('/').filter(Boolean).slice(0, 4).join('/');
+  const vis = (e) => !!(e.offsetParent || e.getClientRects().length);
+  const PROIBIDO = /finalizar|pagar|pagamento|checkout|concluir|fazer pedido|confirmar|cupom|trocar|remover|excluir|limpar|esvaziar/i;
+  const rot = (b) => `${b.getAttribute('aria-label') || ''} ${b.innerText || b.textContent || ''}`;
+  const botoes = (raiz) => [...raiz.querySelectorAll('button,[role=button]')].filter((b) => vis(b) && !PROIBIDO.test(rot(b)));
+  const MAIS = /aument|mais |increase|^\s*\+\s*$/i;
+  let cancelar = false;
+
+  function achaCartao(nome) {
+    const alvo = Nucleo.normalizar(nome).trim();
+    const folhas = [...document.querySelectorAll('body *')].filter((e) => !host.contains(e) && e.children.length === 0 && Nucleo.normalizar(e.textContent).trim() === alvo);
+    for (const f of folhas) {
+      let c = f;
+      for (let i = 0; i < 5 && c.parentElement; i++) {
+        c = c.parentElement;
+        const t = c.innerText || '';
+        if ((t.match(PRECO) || []).length >= 1 && t.length < 400) return c;
+      }
+    }
+    return null;
+  }
+
+  async function adicionar(nome, pacotes) {
+    const card = achaCartao(nome);
+    if (!card) return 'produto não encontrado na tela';
+    card.scrollIntoView({ block: 'center' });
+    await esperar(300);
+    const direto = botoes(card).find((b) => /adicionar|^\s*add\b|^\s*\+\s*$/i.test(rot(b)));
+    if (direto) direto.click(); else card.click();
+    await esperar(900);
+    const dlg = [...document.querySelectorAll('[role=dialog],[aria-modal=true]')].find((d) => vis(d) && !host.contains(d));
+    if (!dlg) {
+      if (!direto) return 'não consegui abrir o produto';
+      for (let i = 1; i < pacotes; i++) {
+        const mais = botoes(card).find((b) => MAIS.test(rot(b))) || direto;
+        mais.click(); await esperar(500);
+      }
+      return 'ok';
+    }
+    for (let i = 1; i < pacotes; i++) {
+      const mais = botoes(dlg).find((b) => MAIS.test(rot(b)));
+      if (!mais) return 'não achei o botão de quantidade';
+      mais.click(); await esperar(300);
+    }
+    const add = botoes(dlg).find((b) => /adicionar|^\s*add\b/i.test(rot(b)));
+    if (!add) return 'não achei o botão "Adicionar"';
+    add.click(); await esperar(1000);
+    return 'ok';
+  }
+
+  async function preencherSacola(ped, el) {
+    cancelar = false;
+    for (const it of ped.itens) {
+      if (cancelar) { it.status = 'cancelado'; continue; }
+      if (it.status === 'ok') continue;
+      aviso(`Adicionando ${it.pacotes}x ${it.nome}…`);
+      try { it.status = await adicionar(it.nome, it.pacotes); } catch (e) { it.status = 'erro: ' + e.message; }
+      salvar(); desenharResultado();
+    }
+    const falhas = ped.itens.filter((i) => i.status !== 'ok').length;
+    aviso(falhas ? `${falhas} item(ns) não foram adicionados — adicione à mão (marcados em vermelho).`
+      : '✔ Itens adicionados. Confira a sacola e finalize o pedido no iFood.');
+  }
+
+  function desenharResultado() {
+    const r = estado.resultado;
+    if (!r) { $('res').innerHTML = ''; return; }
+    const aqui = lojaIdAtual();
+    $('res').innerHTML = r.pedidos.map((p, n) => `<div class="ped"><b>${p.nome}</b> <a href="${p.url}" target="_blank">abrir loja</a><br>
+      ${p.itens.map((e) => `${e.status === 'ok' ? '✅' : e.status ? '❌' : '▫️'} ${e.pacotes}x ${e.nome} — ${brl(e.custo)} <small>(${brl(e.pu)}/${e.rot})${e.status && e.status !== 'ok' ? ' — ' + e.status : ''}</small>`).join('<br>')}
+      <br><small>subtotal ${brl(p.subtotal)} · entrega ${p.taxa ? brl(p.taxa) : 'grátis'}${p.desconto ? ' · cupom -' + brl(p.desconto) : ''}</small><br><b>${brl(p.total)}</b><br>
+      ${p.id === aqui ? `<button class="b" data-add="${n}">Adicionar à sacola do iFood</button><button class="b s" data-stop="1">Parar</button>`
+        : '<small>Abra esta loja para adicionar os itens.</small>'}</div>`).join('') +
+      `<div class="tot">Total: ${brl(r.total)}</div>` + r.dicas.map((d) => `<div class="sug">${d}</div>`).join('') +
+      '<small>Só adiciono à sacola. Finalizar e pagar é com você.</small>';
+    sh.querySelectorAll('[data-add]').forEach((b) => { b.onclick = () => preencherSacola(r.pedidos[+b.dataset.add]); });
+    sh.querySelectorAll('[data-stop]').forEach((b) => { b.onclick = () => { cancelar = true; }; });
+  }
 
   $('mon').onclick = () => {
     const itens = lerLista($('lista').value), lojas = Object.values(estado.lojas);
     if (!itens.length || !lojas.length) { aviso('Preencha a lista e colete pelo menos uma loja.'); return; }
-    const res = resolver(itens, lojas), dicas = sugerir(res);
-    const linhas = [];
-    const html = res.plano.pedidos.map((p) => {
-      linhas.push(`${p.loja.nome}`, ...p.escolhas.map((e) => `  ${e.pacotes}x ${e.produto.nome} = ${brl(e.custo)}`), `  Total ${brl(p.total)}`);
-      return `<div class="ped"><b>${p.loja.nome}</b> <a href="${p.loja.url}" target="_blank">abrir loja</a><br>
-      ${p.escolhas.map((e) => `${e.pacotes}x ${e.produto.nome} — ${brl(e.custo)} <small>(${brl(precoUnit(e.produto))}/${rotulo(e.produto)})</small>`).join('<br>')}
-      <br><small>subtotal ${brl(p.subtotal)} · entrega ${p.taxa ? brl(p.taxa) : 'grátis'}${p.desconto ? ' · cupom -' + brl(p.desconto) : ''}</small><br><b>${brl(p.total)}</b></div>`;
-    }).join('');
-    $('res').innerHTML = `${html}<div class="tot">Total: ${brl(res.plano.total)}</div>` +
-      dicas.map((d) => `<div class="sug">${d}</div>`).join('') + '<button class="b s" id="cp">Copiar lista</button>';
-    $('cp').onclick = () => navigator.clipboard.writeText(linhas.join('\n') + `\nTOTAL ${brl(res.plano.total)}`).then(() => aviso('Copiado.'));
-    aviso('');
+    const res = resolver(itens, lojas);
+    estado.resultado = {
+      total: res.plano.total, dicas: sugerir(res),
+      pedidos: res.plano.pedidos.map((p) => ({ id: p.loja.id, nome: p.loja.nome, url: p.loja.url, subtotal: p.subtotal,
+        taxa: p.taxa, desconto: p.desconto, total: p.total,
+        itens: p.escolhas.map((e) => ({ nome: e.produto.nome, pacotes: e.pacotes, custo: e.custo, pu: precoUnit(e.produto), rot: rotulo(e.produto) })) })),
+    };
+    salvar(); desenharResultado(); aviso('');
   };
+  $('lim').onclick = () => { estado.lojas = {}; estado.resultado = null; salvar(); desenharLojas(); desenharResultado(); };
   desenharLojas();
+  desenharResultado();
+  if (estado.resultado && estado.resultado.pedidos.some((p) => p.id === lojaIdAtual())) { $('p').hidden = false; aviso('Pedido pendente nesta loja: clique em "Adicionar à sacola do iFood".'); }
 })();

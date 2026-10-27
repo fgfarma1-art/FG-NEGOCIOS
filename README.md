@@ -21,9 +21,13 @@ python -m unittest discover -s tests -t .
 3. Abra cada mercado e clique **Coletar esta loja** (ele rola a página sozinho e lê os preços). Confira entrega,
    mínimo e frete grátis, que podem ser editados na própria caixinha da loja.
 4. Clique **Montar carrinho**: mostra quanto comprar em cada loja, total, link para abrir a loja e sugestões.
+   O plano fica salvo entre páginas.
+5. Em cada loja do plano, abra a loja e clique **Adicionar à sacola do iFood**: o painel clica nos botões de
+   adicionar (ajustando a quantidade) e marca ✅/❌ cada item. Itens com ❌ você adiciona à mão. O painel **só adiciona
+   à sacola; nunca finaliza nem paga**. Confira a sacola e feche o pedido no iFood. Botão **Parar** interrompe.
 
 Tudo roda no seu navegador; nada é enviado para fora. Testes: `node tests/test_extensao.js` (paridade com o Python)
-e `node tests/test_painel.js` (painel completo no Chromium com lojas simuladas). **Ainda não foi validado contra o HTML
+e `node tests/test_painel.js` e `node tests/test_sacola.js` (painel e preenchimento da sacola no Chromium com lojas simuladas). **Ainda não foi validado contra o HTML
 real do iFood**: se o botão disser "Não achei produtos", o seletor precisa de ajuste com um exemplo real.
 
 ### Alternativa: Python + CSV

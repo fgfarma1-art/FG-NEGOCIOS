@@ -1,2 +1,13 @@
 <!doctype html><meta charset=utf-8><title>Supermercado Beta | iFood</title><body><h1>Supermercado Beta</h1>
-<p>Entrega R$ 4,99 • Pedido mínimo R$ 30,00</p><div class="c"><div>Arroz Branco Tipo 1 5kg</div><span>R$ 27,50</span></div><div class="c"><div>Feijão Carioca 1kg</div><span>R$ 7,89</span></div><div class="c"><div>Leite Integral 1L</div><span>R$ 5,69</span></div><div class="c"><div>Café Torrado 500g</div><span>R$ 21,90</span></div></body>
+<p>Entrega R$ 4,99 • Pedido mínimo R$ 30,00</p><div class="c" onclick="abrir('Arroz Branco Tipo 1 5kg')"><div>Arroz Branco Tipo 1 5kg</div><span>R$ 27,50</span></div><div class="c" onclick="abrir('Feijão Carioca 1kg')"><div>Feijão Carioca 1kg</div><span>R$ 7,89</span></div><div class="c" onclick="abrir('Leite Integral 1L')"><div>Leite Integral 1L</div><span>R$ 5,69</span></div><div class="c" onclick="abrir('Café Torrado 500g')"><div>Café Torrado 500g</div><span>R$ 21,90</span></div>
+<button onclick="window.__finalizou=true">Finalizar pedido</button><script>
+window.__cart = {}; window.__finalizou = false;
+function add(n, q){ window.__cart[n] = (window.__cart[n]||0) + q; }
+function abrir(n){
+  const d = document.createElement('div'); d.setAttribute('role','dialog'); let q = 1;
+  d.innerHTML = '<h2>'+n+'</h2><button aria-label="Diminuir quantidade">-</button><span id="q">1</span><button aria-label="Aumentar quantidade">+</button><button id="ok">Adicionar</button>';
+  d.querySelector('[aria-label^=Aumentar]').onclick = (e)=>{ e.stopPropagation(); q++; d.querySelector('#q').textContent = q; };
+  d.querySelector('#ok').onclick = (e)=>{ e.stopPropagation(); add(n, q); d.remove(); };
+  document.body.appendChild(d);
+}
+</script></body>
