@@ -49,11 +49,24 @@ def um(sec):
             seen.add(ln)
             if p[4] == "O voto do eleitor foi computado": v.append(p[0][11:19])
     return dict(mun=mun, z=z, s=s, st="OK", n=len(v), apos=sum(1 for t in v if t >= corte), ultimo=max(v) if v else "")
+import os
+F = ["mun", "z", "s", "st", "n", "apos", "ultimo"]
+feitos = {}
+if os.path.exists(out):
+    for r in csv.DictReader(open(out)): feitos[(r["mun"], r["z"], r["s"])] = r
+pend = [x for x in secs if (str(x[0]), str(x[1]), str(x[2])) not in feitos]
+novo = not os.path.exists(out)
+with open(out, "a", newline="") as f, cf.ThreadPoolExecutor(int(os.environ.get("THREADS", "6"))) as ex:
+    w = csv.DictWriter(f, fieldnames=F, extrasaction="ignore")
+    if novo: w.writeheader()
+    futs = [ex.submit(um, x) for x in pend]
+    for i, fu in enumerate(cf.as_completed(futs)):
+        try: w.writerow(fu.result())
+        except Exception as e: print("erro", e, flush=True)
+        if i % 500 == 0: f.flush(); print(i, "/", len(pend), flush=True)
 rows = []
-with cf.ThreadPoolExecutor(6) as ex:
-    for r in ex.map(um, secs): rows.append(r)
-with open(out, "w", newline="") as f:
-    w = csv.DictWriter(f, fieldnames=["mun", "z", "s", "st", "n", "apos", "ultimo"]); w.writeheader(); w.writerows(rows)
+for r in csv.DictReader(open(out)):
+    r["n"] = int(r["n"] or 0); r["apos"] = int(r["apos"] or 0); rows.append(r)
 ok = [r for r in rows if r["st"] == "OK"]
 print(uf, "seções:", len(rows), "com log:", len(ok), "| votos computados:", sum(r["n"] for r in ok), "| após", corte, "(local):", sum(r["apos"] for r in ok), "| seções com voto após:", sum(1 for r in ok if r["apos"] > 0))
 from collections import Counter; print(Counter(r["st"] for r in rows))
