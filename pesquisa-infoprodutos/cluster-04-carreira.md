@@ -89,4 +89,47 @@ Nota: os segmentos 7 a 10 foram completados em 16/11/2026 por um segundo agente,
 - Nota de viabilidade: **6/10** para planilha de nicho (farmácia/pequeno comércio); [ESTIMATIVA] 2/10 para curso genérico de Excel ou pacote genérico.
 - Fontes: https://www.hashtagtreinamentos.com/comunidade-impressionadora ; https://www.hashtagtreinamentos.com/curso-power-bi ; https://www.estagiotrainee.com/excel ; https://hotmart.com/pt-br/marketplace/produtos/8-mil-planilhas-de-excell-prontas-para-uso-e-edicao/N92198451J ; https://hotmart.com/pt-br/marketplace/produtos/pacote-de-planilhas-42-planilhas-editaveis-para-empresas-e-comercio/G97239167G ; https://hotmart.com/pt-br/marketplace/produtos/planilha-de-excel-gerenciamento-de-clientes-e-compras/S77428111V ; https://lista.mercadolivre.com.br/planilha-excel-escritorio-advocacia
 
-<!-- Segmentos 9 e 10, tabela-resumo e top 3: em elaboração -->
+## 9. Programação e tecnologia
+- Procura: [DADO] Estudo da Brasscom de 2021 projetava demanda de 159 mil novas vagas de TI por ano contra 53 mil formados, déficit de cerca de 106 mil por ano e 797 mil profissionais até 2025 (Convergência Digital, Bem Paraná). O dado é antigo e anterior à onda de demissões e à IA generativa; número atualizado, situação das vagas júnior e efeito da IA: sem dado encontrado. Ranking nas plataformas e número de alunos de Alura/Rocketseat: sem dado encontrado.
+- Ticket típico: [DADO] DIO: plano gratuito e plano pago em 12x de R$ 249,90 (cerca de R$ 3.000 por ano). [DADO] Alura: plano de 2 anos entre R$ 1.815,36 (promoção) e R$ 5.988 (plano Pro), conforme a página. Preço da Rocketseat e de cursos de produtores pequenos: sem dado encontrado. [ESTIMATIVA] Cursos individuais de produtor pequeno entre R$ 97 e R$ 997.
+- Concorrência: muito alta e profissionalizada (Alura, DIO, Rocketseat, Hashtag, Udemy, Curso em Vídeo gratuito), além de documentação e YouTube gratuitos e de assistentes de IA que ensinam e escrevem código.
+- Custo de marketing: sem dado encontrado.
+- Riscos: [DADO] Parecer do Procon-MPMG (março de 2025) trata como prática abusiva vender curso de capacitação sob falsa garantia de emprego. [DADO] Há reclamações de 2026 no Reclame Aqui sobre cursos vendidos com promessa de vaga e recusa de reembolso (casos individuais, não medem prevalência). Conteúdo técnico envelhece rápido. Exige competência real: aluno de programação testa o código e percebe erro na hora.
+- SWOT: **F** ticket alto e empresas dispostas a pagar; o perfil já desenvolveu um app | **Fr** ter feito um app não equivale a saber ensinar; sem portfólio público nem audiência | **O** recorte "criar app sem ser programador, com IA", contando a experiência real do próprio app | **A** plataformas com assinatura barata, conteúdo gratuito e IA; promessa de emprego em TI ficou desacreditada.
+- Nota de viabilidade: **3/10** para curso de programação; [ESTIMATIVA] 5/10 para o recorte "como construí um app com IA sem ser programador", desde que o relato seja verdadeiro e sem promessa de renda.
+- Fontes: https://convergenciadigital.com.br/carreira/brasil-tem-um-dficit-anual-de-106-mil-talentos-em-ti ; https://www.bemparana.com.br/noticias/economia/brasil-forma-53-mil-profissionais-em-ti-por-ano-mas-mercado-precisa-de-159-mil/amp/ ; https://www.dio.me/planos ; https://www.alura.com.br/carreiras/platform-engineering ; https://blog-ia.alura.com.br/carreiras/platform-engineering ; https://mpmg.mp.br/data/files/3C/13/5C/7F/5A08591061202D49760849A8/Par%20n1-Comercializar%20cursos%20capacitacao%20sob%20falsa%20garantia%20de%20obtencao%20de%20emprego-Procon-MPMG-06mar2025.pdf ; https://www.reclameaqui.com.br/ennet/venda-de-curso-disfarcada-de-entrevista-de-emprego-com-promessa-de-contratacao-e-recusa-de-reembolso_tSkPk8MoX4I9dfTb/
+
+## 10. Gestão de projetos e certificações
+- Procura: [DADO] O Brasil tinha 15.375 profissionais com certificação PMP em janeiro de 2025 (Quero Bolsa, portal com interesse comercial; não conferido no PMI). É um público pequeno. Número de candidatos por ano, procura por Scrum/CAPM e ranking nas plataformas: sem dado encontrado.
+- Ticket típico: [DADO] Custo total do PMP estimado em R$ 3.600 a R$ 6.000, sendo cerca de R$ 1.500 de curso preparatório, R$ 1.200 de materiais e simulados e R$ 2.430 de exame para membro (estimativas do Quero Bolsa). [DADO] Exame CAPM: US$ 225 (membro) ou US$ 300. [DADO] Curso europeu de PMP em português a 199 a 299 euros. Preços na Hotmart e na Udemy: sem dado encontrado.
+- Concorrência: média em número, alta em credencial. [DADO] Há cursos gratuitos com certificado (Cursa, Alison), cursos livres do Descomplica e da Alura, preparatório da FIA e simulado oficial vendido pelo próprio PMI.
+- Custo de marketing: sem dado encontrado. [ESTIMATIVA] Público de renda mais alta e segmentável por cargo, mas pequeno.
+- Riscos: [DADO] O preparatório para PMP precisa de 35 horas de formação e a recomendação é comprar de provedor reconhecido pelo PMI, o que um iniciante não é. Marcas PMP, PMBOK e Scrum são registradas e têm regras de uso. Vender "dumps" (questões reais vazadas) viola as regras do exame. O conteúdo muda quando o exame é revisto (há versão 2026 do exame).
+- SWOT: **F** comprador com renda e motivação clara (aumento salarial) | **Fr** exige certificação e experiência do autor; público pequeno | **O** modelos e planilhas de gestão de projetos (cronograma, matriz de riscos), que dispensam credencial | **A** provedores autorizados, cursos gratuitos e material oficial do PMI.
+- Nota de viabilidade: **2/10**. Sem a certificação, o perfil não tem como ensinar com honestidade nem como ser provedor reconhecido.
+- Fontes: https://querobolsa.com.br/revista/quanto-custa-a-certificacao-pmp-em-2026-veja-todos-os-custos ; https://querobolsa.com.br/revista/pmp-vale-a-pena-em-2026-os-numeros-que-respondem ; https://querobolsa.com.br/revista/capm-a-certificacao-pmi-para-quem-esta-comecando-em-gestao-de-projetos ; https://www.innovativelearning.eu/pt/products/pmi/pmp/89949-pmp-pmbok-7th-edition-180d-without-exam.html ; https://www.pmi.org/dcpdp/sku/EL335 ; https://cursa.app/pt/curso-gratuito/gestao-de-projetos-com-pmbok-7-scrum-agil-e-hibrido-do-zero-ao-avancado-fbbf ; https://gpro.fia.com.br/cursos/curso-preparatorio-para-certificacao-pmp
+
+## Tabela-resumo
+
+Tickets marcados com (E) são [ESTIMATIVA]; os demais vêm das fontes de cada seção.
+
+| # | Segmento | Ticket | Concorrência | Risco principal | Nota |
+|---|---|---|---|---|---|
+| 1 | Concursos públicos | R$ 27 a R$ 197 (E) para produtor pequeno; assinaturas grandes cerca de R$ 1.900/ano | Muito alta | Conteúdo desatualiza; pirataria | 6 |
+| 2 | ENEM e vestibular | R$ 27 a R$ 300 (E) | Alta | Público menor de idade, sazonal | 3 |
+| 3 | Exame da OAB | R$ 1.390 a R$ 1.997 (cursos); R$ 47 a R$ 197 (E) | Alta | Exige formação em Direito | 3 |
+| 4 | Residência médica | R$ 5.697 a R$ 12.897 | Poucos e grandes | Exige médico; CFM | 2 |
+| 5 | Inglês | R$ 97 a R$ 2.000+ (E) | Muito alta | Promessa de fluência, reembolso | 3 |
+| 6 | Outros idiomas | R$ 40 a R$ 150 | Média | Exige fluência; ticket baixo | 3 |
+| 7 | Currículo, entrevistas e LinkedIn | R$ 19 a R$ 97 (E) | Média (alta em gratuitos e IA) | Ticket baixo, compra única | 4 |
+| 8 | Excel e Power BI | Planilhas R$ 7,99 a R$ 49,90; cursos R$ 297 a R$ 1.497 | Alta | Guerra de preço em pacotes genéricos | 6 (planilha de nicho) |
+| 9 | Programação e tecnologia | R$ 1.800 a R$ 6.000 (assinaturas) | Muito alta | Promessa de emprego; exige domínio | 3 |
+| 10 | Gestão de projetos e certificações | R$ 1.500 (preparatório PMP) | Média | Exige certificação do autor | 2 |
+
+## Os 3 melhores do cluster
+
+1. **Concursos públicos, recorte farmácia/saúde (6/10).** Público que compra por necessidade e a única área em que a ligação da pessoa com farmácia vale como autoridade real. Absorve também a residência multiprofissional em farmácia (subrecorte do segmento 4). Depende de ela dominar de fato o conteúdo ou ter um coprodutor que domine.
+2. **Excel e Power BI, na forma de planilha de nicho (6/10).** Planilha para farmácia ou pequeno comércio (estoque, validade, precificação) é o produto mais rápido de produzir com honestidade e não exige diploma. O limite é o ticket: a R$ 27 a R$ 49,90, os R$ 55 mil líquidos pedem [ESTIMATIVA] mais de 1.500 vendas, o que não cabe em R$ 2.000/mês de anúncios sem um produto complementar mais caro.
+3. **Currículo, entrevistas e LinkedIn (4/10).** Vem em terceiro por falta de alternativa melhor, não por mérito: é produzível sem credencial, mas tem ticket baixo, compra única e concorrência de IA gratuita.
+
+Conclusão do cluster: nenhum segmento passa de 6/10 para este perfil. O cluster é dominado por autoridade e credencial (professor, médico, advogado, certificado), e o que resta ao iniciante são produtos de apoio de ticket baixo. Nenhum custo de aquisição (CPA, ROAS) específico foi encontrado para nenhum dos 10 segmentos, então a viabilidade financeira de todos eles segue sem comprovação.

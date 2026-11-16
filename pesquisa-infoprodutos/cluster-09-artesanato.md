@@ -1,6 +1,6 @@
 # Cluster 09 — Artesanato, hobbies e casa
 
-Status: EM ANDAMENTO (segmentos 1 a 5 escritos; 6 a 10 e tabela final pendentes).
+Status: CONCLUÍDO (segmentos 1 a 5 por um primeiro agente; 6 a 10, tabela e ranking por um segundo agente, com 8 buscas e sem abrir páginas, só trechos de resultado).
 
 Limitações da pesquisa (valem para todo o arquivo):
 - Só a busca na web funcionou. As páginas de hotmart.com, trafius.com.br e viniensina.com.br não puderam ser abertas (domínios fora da rede permitida da sessão). Preços, número de alunos e ordem de "mais vendidos" do marketplace da Hotmart NÃO foram verificados; os trechos de busca não mostram preço.
@@ -106,3 +106,38 @@ Limitações da pesquisa (valem para todo o arquivo):
 - SWOT: **F** comunidade engajada (anime, mangá) | **Fr** impossível ensinar sem saber desenhar; público de baixa renda própria | **O** apenas coprodução com um desenhista | **A** YouTube gratuito e IA generativa de imagem
 - Nota de viabilidade: 2/10 — depende totalmente de talento demonstrável e atinge público com baixo poder de compra.
 - Fontes: https://hotmart.com/pt-br/marketplace/produtos/desenhar-top-personagens-manga/L51744885S ; https://www.hotmart.com/product/desenhando-animes/D17004355Y ; https://hotmart.com/pt-br/marketplace/produtos/extra-viver-do-desenho-e-crescer-no-youtube/M43600592Q ; https://hotmart.com/pt-br/marketplace/produtos/metodo-quadros-que-encantam/V103869996T ; https://www.jivochat.com.br/blog/reviews/cursos/curso-de-desenho.html ; https://www.udemy.com/pt/topic/drawing/
+
+## 10. Pets (adestramento e cuidados)
+- Procura: [DADO] maior mercado físico do cluster: faturamento do setor pet de R$ 77,96 bi em 2025 e projeção de R$ 81 bi em 2026 (Abempet, via imprensa); cerca de 62 a 66 milhões de cães e 32 a 33 milhões de gatos, conforme a fonte. [DADO] na Hotmart há vários cursos de adestramento; o "CWD 15x15" tem nota 4,7 com 294 avaliações, o maior número de avaliações visto neste cluster; há produtos de dor específica ("xixi e cocô no lugar certo", problemas de comportamento). Kiwify: nenhum resultado. Ranking e volume de busca: sem dado encontrado.
+- Ticket típico: sem dado encontrado (trechos sem preço). [ESTIMATIVA] guias de R$ 27 a 67 e cursos em vídeo de R$ 97 a 297.
+- Concorrência: média a alta; adestradores profissionais com cursos longos (um anuncia mais de 30 horas e mais de 20 cães nas aulas), Udemy e conteúdo gratuito de varejistas (Cobasi) e YouTube.
+- Custo de marketing: sem dado encontrado.
+- Riscos: [DADO] a Lei 5.517/1968 reserva o exercício da medicina veterinária a inscritos no sistema CFMV/CRMV, e o exercício ilegal é contravenção (art. 47 do Decreto-Lei 3.688/1941, segundo comentário jurídico). Conteúdo de saúde, diagnóstico, medicação ou dieta terapêutica para animais fica fora do alcance de um leigo; a formação em farmácia humana não habilita. Posição do CFMV sobre adestradores e infoprodutos de comportamento: sem dado encontrado. Adestramento exige prática real; conselho errado em casos de agressividade pode causar mordidas.
+- SWOT: **F** público enorme e emocionalmente disposto a gastar; dores específicas e urgentes (filhote novo, xixi fora do lugar) | **Fr** a pessoa não é adestradora nem veterinária | **O** produto de organização, e não de técnica: guia e checklists do primeiro filhote ou gato, planilha de rotina e custos, revisado por veterinário ou adestrador parceiro | **A** concorrentes com vídeo e autoridade; limite legal em tudo que toca saúde animal
+- Nota de viabilidade: 5/10 — melhor relação entre tamanho de público e dor concreta do cluster, mas só é honesto com revisão ou coprodução de profissional e ficando longe de saúde animal.
+- Fontes: https://gironews.com/negocios/setor-pet-projeta-faturamento-de-r-81-bilhoes-no-brasil-em-2026/ ; https://www.band.com.br/pets/noticias/setor-pet-no-brasil-movimenta-r-779-bi-confira-tendencias-e-a-petsa-2026-202608111327 ; https://www.diariodepernambuco.com.br/economia/2025/10/11697954-mercado-pet-deve-movimentar-no-pais-rs-772-bilhoes-em-2025.html ; https://hotmart.com/pt-br/marketplace/produtos/adestramento-cwd-15x15/E6493865W ; https://hotmart.com/pt-br/marketplace/produtos/adestramento-raiz-sergio-cantadeiro ; https://hotmart.com/pt-br/marketplace/produtos/lmbk-adestramento/G52506991S ; https://www.legjur.com/legislacao/htm/lei_00055171968 ; https://modeloinicial.com.br/artigos/exercicio-ilegal-profissao
+
+## Tabela-resumo
+
+Tickets marcados com (est.) são estimativas; não houve preço verificado.
+
+| # | Segmento | Ticket | Concorrência | Risco principal | Nota |
+|---|----------|--------|--------------|-----------------|------|
+| 1 | Crochê e amigurumi | R$ 10 a 197 (est.) | Alta, pulverizada | Direito autoral; ticket baixo | 4 |
+| 2 | Costura e modelagem | Abaixo de R$ 100 a R$ 334 | Alta, com oferta gratuita institucional | Exige especialista | 3 |
+| 3 | Sabonetes, velas e cosméticos artesanais | Sem dado | Média (Peter Paiva como referência) | Anvisa; dano físico por formulação errada | 6 |
+| 4 | Papelaria personalizada e sublimação | Sem dado | Média a alta (est.) | Direito autoral e de marca | 4 |
+| 5 | Marcenaria | R$ 499,90 (B2B); iniciante sem dado | Média, com conteúdo gratuito | Segurança física; exige oficina | 2 |
+| 6 | Jardinagem e hortas | R$ 90 (um caso); R$ 27 a 97 (est.) | Alta por oferta gratuita (Embrapa) | Baixa disposição a pagar | 4 |
+| 7 | Violão e música | R$ 47 a 297 (est.) | Muito alta (Cifra Club, apps) | Exige músico; direito autoral | 2 |
+| 8 | Fotografia | R$ 37 (um caso); até R$ 197 (est.) | Alta, fragmentada | Exige portfólio; promessa de renda | 4 |
+| 9 | Desenho e pintura | R$ 50 a mais de R$ 100 | Alta | Exige talento; público jovem de baixa renda | 2 |
+| 10 | Pets (adestramento e cuidados) | R$ 27 a 297 (est.) | Média a alta | Limite legal em saúde animal (CFMV) | 5 |
+
+## Os 3 melhores do cluster
+
+1. **Sabonetes, velas e cosméticos artesanais (6/10)** — único segmento em que a ligação com farmácia vira vantagem real, e há uma janela recente (Lei 15.154/2025 e regulamentação da Anvisa de setembro de 2026). O produto viável é informação regulatória para artesãs, não técnica manual. Exige ler a RDC final e, de preferência, revisão de um profissional habilitado.
+2. **Pets, adestramento e cuidados (5/10)** — maior público do cluster (setor de R$ 77,96 bi em 2025) e dores específicas. Só é honesto como material de organização revisado por profissional, sem tocar em saúde animal.
+3. **Jardinagem e hortas (4/10)** — empata em nota com crochê, papelaria e fotografia; fica em terceiro por ser o único dos quatro que a pessoa consegue produzir sozinha com pesquisa honesta e sem risco regulatório ou de direito autoral. O ponto fraco é a concorrência gratuita da Embrapa e o ticket baixo.
+
+Conclusão do cluster: [ESTIMATIVA] nenhum segmento daqui sustenta, com os dados encontrados, a meta de R$ 55 mil líquidos em prazo curto com R$ 2.000/mês de anúncio. Os tickets são baixos, quase todos os produtos dependem de habilidade manual demonstrável e não foi achado nenhum dado de custo de aquisição ou ROAS para estes verticais. O cluster é mais fraco que os de saúde, finanças ou negócios para o perfil descrito.
