@@ -2,7 +2,7 @@
 
 Pesquisa feita em 15/11/2026. Legenda: **[DADO]** = sustentado por fonte citada; **[ESTIMATIVA]** = raciocínio do pesquisador, sem fonte direta.
 
-> VERSÃO PARCIAL — em atualização. Segmentos 8, 9 e 10 ainda sem busca concluída.
+> Segmentos 1 a 7 pesquisados em 15/11/2026; segmentos 8, 9 e 10, tabela-resumo e ranking concluídos em 16/11/2026 por um segundo agente, com 7 buscas e sem abrir páginas (só resultados de busca).
 
 ## Limitações gerais desta pesquisa
 - O domínio hotmart.com não é acessível nesta sessão (bloqueio de rede). Só foi possível ver títulos de produtos via resultados de busca, sem preço, nota nem número de vendas. Por isso, quase todo "ticket típico" abaixo é [ESTIMATIVA] ou vem de sites de terceiros.
@@ -86,10 +86,56 @@ Pesquisa feita em 15/11/2026. Legenda: **[DADO]** = sustentado por fonte citada;
 - Fontes: https://descomplica.com.br/blog/2-4-milhoes-docentes-censo-escolar-vestibular-2/ ; https://download.inep.gov.br/censo_escolar/resultados/2024/apresentacao_coletiva.pdf ; https://www.gazetadopovo.com.br/educacao/associacao-denuncia-no-exterior-perseguicao-a-pais-que-fazem-homeschooling/ ; https://www.gazetadopovo.com.br/vida-e-cidadania/avanco-do-homeschooling-senado-2027/ ; https://jatapronto.com.br/produto/lapbook-bullying-atividade-interativa-sobre-bullying
 
 ## 8. Amamentação
-- (pendente)
+- Procura: [DADO] Há cursos para mães na Hotmart ("Escola da Amamentação", "Programa Bora Amamentar" com grupo e 2 encontros ao vivo por mês, "Jornada da Amamentação", "Amamentação MAIs Leve" com 7 módulos e 79 aulas, "Curso de Retorno ao Trabalho") e uma segunda camada de cursos para formar profissionais ("Consultora de amamentação - Avançado", "Manejo do Aleitamento Materno", "Mama Pequenino"). Os cursos identificados são de enfermeiras, enfermeiras obstetras e consultoras. [DADO] Público: cerca de 2,38 milhões de nascimentos/ano, em queda (ver dados gerais). Volume de busca e ranking de mais vendidos: sem dado encontrado.
+- Ticket típico: sem dado encontrado (a busca não exibe preços). [ESTIMATIVA] cursos gravados para mães R$ 67 a R$ 297; consultoria individual e formação profissional acima disso.
+- Concorrência: [ESTIMATIVA] Média-alta e quase toda de profissionais de saúde; a formação de novas consultoras alimenta a oferta, como em sono e disciplina positiva. Há orientação gratuita no SUS (bancos de leite humano) — não verificado por fonte nesta pesquisa. Número de consultoras: sem dado encontrado.
+- Custo de marketing: sem dado específico. Referência genérica: CPM R$ 28 a R$ 60 (Trafius, fonte com interesse comercial).
+- Riscos: [DADO] A Lei 11.265/2006 (NBCAL, regulamentada pelo Decreto 9.579/2018) restringe a promoção comercial de fórmulas infantis, mamadeiras, bicos, chupetas e protetores de mamilo, inclusive em sites; em 2014, IBFAN e Idec registraram 114 infrações de 35 empresas. Isso limita afiliação e patrocínio desses produtos dentro de um infoproduto. [DADO] Não foi encontrada regulamentação da profissão de consultora de amamentação. [ESTIMATIVA] Manejo de dor, mastite, baixo ganho de peso e uso de medicamentos é assunto clínico; orientação errada tem consequência para o bebê. A Meta não permite afirmar no anúncio que a pessoa amamenta ou acabou de parir. Janela de compra curta (final da gestação e primeiros meses), sem recompra.
+- SWOT: **F** dor aguda nos primeiros dias, mãe compra rápido | **Fr** exige profissional de saúde; janela curta; sem recompra | **O** recorte não clínico, como retorno ao trabalho, ordenha e armazenamento de leite, com revisão de enfermeira; a ligação com farmácia ajuda no tema medicamentos e lactação, desde que com profissional habilitado | **A** conteúdo gratuito do SUS e de consultoras no Instagram; NBCAL restringe monetização com produtos
+- Nota de viabilidade: **3/10** — mercado de profissionais de saúde; para não especialista só cabe um recorte periférico, de ticket baixo e público pequeno.
+- Fontes: https://hotmart.com/product/escola-da-amamentacao/Y42667020T ; https://hotmart.com/pt-br/marketplace/produtos/programa-bora-amamentar/V66018785Y ; https://hotmart.com/pt-br/marketplace/produtos/amamentacao-mai-s-leve/R95548446C ; https://hotmart.com/pt-br/marketplace/produtos/consultora-de-amamentacao-avancado/P68961821N ; https://planalto.gov.br/ccivil_03/_Ato2004-2006/2006/Lei/L11265.htm ; https://idec.org.br/em-acao/em-foco/decreto-regula-publicidade-de-produtos-que-interferem-na-amamentaco-entenda-importancia
 
-## 9. Adolescentes
-- (pendente)
+## 9. Adolescentes (materiais para pais)
+- Procura: [DADO] Vários cursos para pais na Hotmart ("Guia para Pais de Adolescentes + E-book", "Disciplina Positiva para Adolescentes" — nota 4,4 com apenas 5 avaliações —, "Adolescência em crise" de Carolina Delboni, "Treinamento Mãe de Adolescente" de pedagoga, "Como ajudar meu filho adolescente nos estudos", "Caminhos da Adolescência"). [DADO] TIC Kids Online Brasil 2025 (Cetic.br): 92% da população de 9 a 17 anos usa internet, mais de 24,5 milhões de jovens; 65% já usaram IA generativa; o uso de internet na escola caiu de 51% para 37% entre 2024 e 2025. [ESTIMATIVA] Telas, redes sociais, apostas e IA são as dores atuais dos pais. Total da população de 10 a 19 anos no Censo 2022, volume de busca e ranking de mais vendidos: sem dado encontrado.
+- Ticket típico: sem dado encontrado. [ESTIMATIVA] R$ 47 a R$ 297 para cursos gravados; ebooks R$ 19 a R$ 47.
+- Concorrência: [ESTIMATIVA] Média: menos produtos e menos avaliações visíveis do que em primeira infância (as 5 avaliações do curso citado sugerem volume baixo, mas é um único indício). Há oferta gratuita: a Escola de Pais do Brasil faz encontros online gratuitos "Fase Adolescência" pela Sympla.
+- Custo de marketing: sem dado específico. Referência genérica: CPM R$ 28 a R$ 60 (Trafius, fonte com interesse comercial).
+- Riscos: [ESTIMATIVA] Baixo risco de política de anúncio se o público-alvo for o adulto (pai ou mãe) e a copy não afirmar condição de saúde mental do filho; temas como depressão, automutilação e dependência exigem psicólogo e encaminhamento, não curso. Resultado difuso e difícil de comprovar, o que tende a elevar reembolso (taxa: sem dado encontrado). Autoridade (psicóloga, pedagoga) pesa na venda. Regras do ECA e da LGPD para dados de menores valem se o produto for usado pelo adolescente — não verificado por fonte nesta pesquisa.
+- SWOT: **F** público grande e janela longa (dos 10 aos 18 anos); menos saturado que bebês | **Fr** pais de adolescentes compram menos por impulso; prova de resultado fraca | **O** recorte "apostas online e telas", em que o perfil tem experiência real (app para parar de apostar), com produto-ferramenta: roteiro de conversa, acordo familiar de uso, configuração de controles | **A** conteúdo gratuito de escolas e ONGs; temas sensíveis fora do alcance de um não especialista
+- Nota de viabilidade: **5/10** — genérico não se sustenta sem autoridade, mas o recorte apostas/telas liga com a experiência do perfil e tem demanda atual; procura por esse recorte não foi medida.
+- Fontes: https://hotmart.com/pt-br/marketplace/produtos/curso-guia-para-pais-de-adolescentes/H72107511M ; https://www.hotmart.com/product/disciplina-positiva-para-adolescentes/T16597427X ; https://hotmart.com/pt-br/marketplace/produtos/carolina-delboni-adolescencia-em-crise-como-resgatar-a-conexao-e-resolver-conflitos/K96326480G ; https://www.sympla.com.br/evento-online/conversas-fase-adolescEncia-t326030/3328163 ; https://www.cetic.br/media/analises/tic_kids_online_brasil_2025_principais_resultados.pdf ; https://teletime.com.br/22/10/2025/criancas-e-adolescentes-ja-usam-ia-e-mediacao-parental-e-desafio/ ; https://www.cnnbrasil.com.br/educacao/uso-de-internet-por-adolescentes-nas-escolas-cai-de-51-para-37/
 
 ## 10. Desfralde
-- (pendente)
+- Procura: [DADO] Na Hotmart a busca só trouxe ebooks, nenhum curso em vídeo: "Desfralde com Amor", "Desfralde sem estresse", "Desfralde Sem Traumas - Adeus Fraldinha", "Como Desfraldar - sem trauma e sem neura", "Desfralde sem drama", além de um guia para terapeutas ocupacionais (85 páginas, inclui TEA). [DADO] Manual SBP/SBU (2019): início médio do treinamento esfincteriano por volta dos 22 meses, conclusão média aos 27,4 meses, duração de 6 a 12 meses; prontidão avaliada pelo pediatra por volta dos 24 meses. [ESTIMATIVA] Com cerca de 2,4 milhões de nascimentos/ano, a coorte que entra na fase de desfralde a cada ano tem tamanho parecido. Volume de busca e ranking de mais vendidos: sem dado encontrado.
+- Ticket típico: sem dado encontrado para os ebooks listados. [ESTIMATIVA] R$ 17 a R$ 47 (ebook simples, sem vídeo).
+- Concorrência: [ESTIMATIVA] Média em quantidade, baixa em qualidade aparente: vários ebooks genéricos de títulos parecidos, sem autor de referência identificado na busca. O manual da SBP é gratuito e público.
+- Custo de marketing: sem dado específico. [ESTIMATIVA] Com ticket abaixo de R$ 47 e CPC de R$ 0,50 a R$ 2,00 (Trafius), a conta depende de order bumps (quadro de recompensas, diário, histórias para a criança).
+- Riscos: [DADO] SBP e SBU dizem que idade sozinha não é bom critério e que o processo deve começar pelos sinais de prontidão, sem forçar a criança. [ESTIMATIVA] Logo, promessas do tipo "desfralde em 3 dias" contrariam a orientação oficial e geram reembolso e risco pelo CDC. Constipação, infecção urinária e enurese são assunto do pediatra. Baixo risco de política de anúncio e sem exigência legal de diploma. Problema pontual: compra única, sem recompra.
+- SWOT: **F** dor concreta com prazo; fonte oficial gratuita e clara para basear o conteúdo | **Fr** ticket baixo; compra única; mercado pequeno | **O** kit prático (guia baseado no manual SBP + quadro de rotina + livro ilustrado para a criança) revisado por pediatra ou terapeuta ocupacional | **A** conteúdo gratuito de pediatras; ebooks genéricos feitos com IA derrubam o preço
+- Nota de viabilidade: **4/10** — honesto e fácil de produzir, mas ticket baixo e sem recompra tornam R$ 55 mil líquidos improváveis com este produto sozinho.
+- Fontes: https://hotmart.com/pt-br/marketplace/produtos/desfralde-com-amor-um-guia-leve-empatico-e-eficaz-para-mamaes-vitoriosas/L100870334S ; https://hotmart.com/pt-br/marketplace/produtos/desfralde-sem-estresse-guia-completo-para-pais-e-filhos/X96796787O ; https://hotmart.com/pt-br/marketplace/produtos/guia-do-desfralde-um-guia-acolhedor-para-profissionais/J105795518X ; https://www.sbp.com.br/fileadmin/user_upload/22076c-MO_-_Treinamento_Esfincteriano.pdf ; https://www.sbp.com.br/imprensa/detalhe/nid/em-parceria-sbp-e-sbu-lancam-documento-sobre-treinamento-esfincteriano-importante-marco-do-desenvolvimento-infantil
+
+## Tabela-resumo do cluster
+
+Tickets marcados com * são [ESTIMATIVA]; os demais têm fonte na seção do segmento.
+
+| # | Segmento | Ticket | Concorrência | Risco | Nota |
+|---|----------|--------|--------------|-------|------|
+| 1 | Gestação e parto | R$ 97 a 497* | Alta | Alto (saúde, exige credencial) | 3 |
+| 2 | Sono do bebê | R$ 97 a 397* | Alta | Alto (promessa difícil, saúde) | 3 |
+| 3 | Introdução alimentar | R$ 17 a 297* | Alta | Médio (engasgo, ato de nutricionista) | 5 |
+| 4 | Alfabetização e atividades para imprimir | R$ 6 a 12,50 avulso; kits R$ 10 a 47* | Muito alta | Baixo (direitos autorais) | 6 |
+| 5 | Educação de filhos e disciplina positiva | R$ 47 a 297* (certificação R$ 2.500 a 2.700) | Alta | Baixo-médio (marca do método, autoridade) | 4 |
+| 6 | Autismo e TDAH | R$ 19 a 67* | Média-alta* | Alto (política Meta, público vulnerável) | 4 |
+| 7 | Materiais para professores e homeschooling | R$ 6 a 12,50 avulso; pacotes R$ 27 a 97* | Alta | Baixo (homeschooling sem lei federal) | 6 |
+| 8 | Amamentação | R$ 67 a 297* | Média-alta* | Alto (clínico, NBCAL) | 3 |
+| 9 | Adolescentes (pais) | R$ 47 a 297* | Média* | Médio (temas de saúde mental) | 5 |
+| 10 | Desfralde | R$ 17 a 47* | Média* | Baixo-médio (promessa de prazo) | 4 |
+
+## Os 3 melhores do cluster
+
+1. **Materiais prontos para professores (nota 6)** — público profissional de 2,4 milhões de docentes (Censo Escolar 2024), dor semanal de planejamento, possibilidade de recompra ou assinatura e nenhuma restrição de anúncio. Ponto fraco: ticket baixo e pirataria; precisa de pedagoga revisora.
+2. **Alfabetização e atividades para imprimir (nota 6)** — menor barreira de entrada do cluster, sem exigência de diploma e sem risco de política de anúncio. Ponto fraco: preço comoditizado (R$ 6 a R$ 12,50 por material em marketplace), o que exige milhares de vendas para chegar a R$ 55 mil líquidos.
+3. **Adolescentes, no recorte apostas e telas (nota 5)** — empata em nota com introdução alimentar; fica à frente porque aproveita a experiência real do perfil com o app para parar de apostar, tem ticket potencial maior e janela de público longa. A procura por esse recorte específico não foi medida. Introdução alimentar (nota 5) é a alternativa, se houver nutricionista revisora.
+
+Ressalva geral: nenhum segmento deste cluster passou de 6. Em todos, o ticket é baixo ou a venda depende de autoridade profissional, e não foi encontrado dado de CPA, ROAS ou taxa de reembolso específico do vertical. As notas refletem mais o risco e a barreira de entrada do que demanda comprovada.
