@@ -1,0 +1,70 @@
+# Cluster 04 — Carreira, concursos e idiomas
+
+Pesquisa feita em 15/11/2026 por busca na web. Legenda: [DADO] = sustentado por fonte citada; [ESTIMATIVA] = raciocínio do pesquisador. Perfil avaliado: iniciante, sem audiência, com CNPJ, não especialista, R$ 2.000/mês de anúncios, meta de R$ 55 mil líquidos.
+
+Observações gerais do cluster:
+- Não há ranking público oficial de nichos mais vendidos da Hotmart ou da Kiwify para 2026. O que existe são artigos de blog (inclusive o da própria Hotmart, que tem interesse comercial) citando Educação, Carreira, Idiomas e Tecnologia entre os nichos fortes, sem números de vendas. Fontes: https://hotmart.com/pt-br/blog/produtos-mais-vendidos-na-internet , https://contaazul.com/blog/infoprodutos-mais-vendidos/
+- Custo de anúncio por vertical: o único número brasileiro encontrado para educação (cursos, pós, idiomas) é CPL de R$ 25 a R$ 80, em um blog que compila terceiros sem metodologia clara (https://babitonhela.com/blog/custo-por-lead-brasil-benchmarks/). CPM, CPC, CPA e ROAS específicos por segmento: sem dado encontrado. Tudo o que aparece abaixo sobre custo por venda é [ESTIMATIVA].
+- [ESTIMATIVA] Com R$ 2.000/mês e CPL de R$ 25 a R$ 80, o orçamento compra de 25 a 80 leads por mês. Isso só fecha conta com produto de ticket baixo vendido direto (sem funil de leads) ou com ticket alto e conversão boa, o que exige autoridade.
+
+## 1. Concursos públicos
+- Procura: [DADO] O Gran estima mais de 10 milhões de concurseiros potenciais no Brasil e diz atender menos de 10% deles (estimativa da própria empresa, com interesse comercial). [DADO] O Gran projetava faturamento de R$ 550 milhões em 2025; outra reportagem fala em "mais de R$ 300 milhões" (os números divergem). Ranking de mais vendidos nas plataformas: sem dado encontrado.
+- Ticket típico: [DADO] Assinatura anual premium do Estratégia em promoção por 12x de R$ 159 (cerca de R$ 1.908), preço cheio 12x de R$ 219,90. [DADO] Mapas mentais em PDF na Nova Concursos vendidos em 12 parcelas de cerca de R$ 10 a R$ 19. [ESTIMATIVA] Infoproduto de produtor pequeno (mapas, resumos, cronogramas, questões comentadas) fica entre R$ 27 e R$ 197.
+- Concorrência: muito alta no topo. Dois gigantes (Gran, com dinheiro do BTG, e Estratégia) vendem "tudo ilimitado" por assinatura, além de Direção, Alfacon, Nova, Casa do Concurseiro e outros. [ESTIMATIVA] O espaço que sobra é o recorte estreito: um concurso específico, uma banca, uma carreira (por exemplo, concursos da área de saúde/farmácia).
+- Custo de marketing: CPL de educação R$ 25 a R$ 80 (fonte fraca, ver acima). CPA e ROAS do nicho: sem dado encontrado.
+- Riscos: sem restrição de anúncio específica. Conteúdo desatualiza a cada edital e a cada mudança de lei; erro de conteúdo gera reembolso e reclamação. Prometer aprovação é propaganda enganosa (CDC). Pirataria e "rateio" de materiais são comuns no nicho (há até PDFs de rateio do Estratégia circulando). Direito de arrependimento de 7 dias (CDC, art. 49).
+- SWOT: **F** público enorme e recorrente; compra por necessidade, não por impulso | **Fr** exige domínio do conteúdo e atualização constante; não especialista erra | **O** recorte "concursos de farmácia/saúde" (SUS, vigilância sanitária, EBSERH), onde a ligação da pessoa com farmácia vira autoridade real | **A** gigantes com assinatura ilimitada e material gratuito farto; pirataria.
+- Nota de viabilidade: **6/10**. O mercado geral é fechado para iniciante, mas o recorte de concursos da área de farmácia/saúde aproveita a única competência real do perfil.
+- Fontes: https://neofeed.com.br/blog/home/com-dinheiro-do-btg-gran-cursos-online-vai-prestar-vestibular-para-novas-areas/ ; https://economicnewsbrasil.com.br/2025/06/30/gran-cursos-online/ ; https://www.estrategiaconcursos.com.br/blog/semana-do-consumidor-concurseiro-2026/amp/ ; https://www.novaconcursos.com.br/mapas-mentais ; https://www.proximosconcursos.com/gran-cursos-ou-estrategia-qual-o-melhor
+
+## 2. ENEM e vestibular
+- Procura: [DADO] O ENEM 2025 teve 4.811.338 inscritos confirmados, alta de cerca de 11% sobre 2024 (MEC, via Estratégia Vestibulares e Blog do Enem). Demanda fortemente sazonal, concentrada entre o meio do ano e novembro. Ranking nas plataformas: sem dado encontrado.
+- Ticket típico: [DADO] Curso de redação ENEM da Apostilas Opção anunciado a R$ 59 à vista (de R$ 525,60). Há muitos produtos de redação na Hotmart (cursos, pacotes de correção, coletâneas de redações nota 1000), sem preço visível nos resultados. Preço atual de Descomplica e Ferretto: sem dado encontrado. [ESTIMATIVA] Ticket de produtor pequeno entre R$ 27 e R$ 300.
+- Concorrência: alta. Plataformas grandes (Descomplica, Ferretto, Aprova Total, Estratégia Vestibulares, Me Salva) e muito conteúdo gratuito de qualidade no YouTube e em sites como o Cursa.
+- Custo de marketing: sem dado específico encontrado. [ESTIMATIVA] O público é jovem e de baixa renda, quem paga costuma ser o pai ou a mãe, e o anúncio precisa falar com duas pessoas diferentes.
+- Riscos: público em grande parte menor de idade (restrições de segmentação de anúncios para menores no Meta e no Google e cuidado redobrado com LGPD). Prometer nota é propaganda enganosa; os números de "alunos nota 1000" vêm dos próprios vendedores, sem verificação. Janela de venda curta: errar o calendário significa esperar um ano.
+- SWOT: **F** quase 5 milhões de candidatos por ano | **Fr** baixo poder de compra, sazonalidade extrema | **O** produtos de apoio baratos (cronograma, repertório de redação, correção) | **A** gratuitos de alta qualidade e plataformas com assinatura barata.
+- Nota de viabilidade: **3/10**. Ticket baixo, público sem renda, sazonal e sem competência do perfil para ensinar o conteúdo.
+- Fontes: https://vestibulares.estrategia.com/portal/noticias/enem-2025-4-8-milhoes-inscritos/ ; https://blogdoenem.com.br/enem-2025-bate-recorde-de-inscritos-com-48-milhoes/ ; https://www.apostilasopcao.com.br/curso-online/redacao-enem ; https://hotmart.com/pt-br/marketplace/produtos/50-exemplos-reais-de-redacao-nota-1000/U105637882Q ; https://aprovatotal.com.br/lp/redacao/
+
+## 3. Exame da OAB
+- Procura: [DADO] Entre 100 mil e 150 mil inscritos por edição, com três edições por ano; o 41º Exame teve 111.909 inscritos e 41% de aprovação na 1ª fase (blog secundário, não conferido na FGV). [DADO] 63,6% das inscrições históricas são de quem já fez a prova antes (Conjur), ou seja, há um público grande de repetentes. [DADO] Só 18,5% passam de primeira (Grupo GEN). Taxa de inscrição de R$ 320 na 44ª edição.
+- Ticket típico: [DADO] Ceisc, 1ª fase: Extensivo Premium de R$ 1.390 a R$ 1.410; plano 1ª + 2ª fase de R$ 1.509 a R$ 1.997. Preço de mapas mentais e resumos de produtores pequenos: sem dado encontrado. [ESTIMATIVA] R$ 47 a R$ 197.
+- Concorrência: alta e especializada (Ceisc, Estratégia OAB, Gran, Damásio, Trilhante, G7 Jurídico). Os cursos já incluem mapas mentais (o Ceisc anuncia mais de 670).
+- Custo de marketing: sem dado encontrado.
+- Riscos: conteúdo jurídico exige formação em Direito; erro em material de prova gera dano real ao aluno e reembolso. Conteúdo muda a cada edição. Prometer aprovação é vedado pelo CDC (há reclamação no Reclame Aqui de preparatório que "garantiu aprovação").
+- SWOT: **F** público que paga caro e repete a prova três vezes por ano | **Fr** exige bacharel em Direito para produzir com honestidade | **O** parceria com advogado recém-aprovado como coprodutor | **A** cursos estabelecidos com taxa de aprovação divulgada.
+- Nota de viabilidade: **3/10**. Bom mercado, mas o perfil não tem formação jurídica e dependeria totalmente de um coprodutor.
+- Fontes: https://oab.estrategia.com/portal/estatisticas-completas-do-exame-de-ordem-da-oab/ ; https://www.conjur.com.br/?p=476056 ; https://blog.grupogen.com.br/juridico/postagens/exameoab/so-185-passam-de-primeira-no-exame-de-ordem-da-oab-diz-estudo/ ; https://ceisc.com.br/cursos/2487-extensivo-premium-1a-48 ; https://www.ceisc.com.br/categorias/planos-oab ; https://psicopedagogia.com.br/conteudo/oab-inscritos-como-consultar-e-entender-o-cadastro
+
+## 4. Residência médica
+- Procura: [DADO] O ENARE 2025 teve 138.974 inscritos no total (Agência Brasil), dos quais 87.040 em residência médica (Estratégia MED), recorde e alta de 56% no total. [DADO] Na edição anterior foram 53.171 inscrições médicas para 4.874 vagas, cerca de 10,9 candidatos por vaga. O total inclui residências uni e multiprofissionais (onde entra farmácia).
+- Ticket típico: [DADO] Medway lista curso a 12x de R$ 527,50 ou R$ 5.697 à vista (a página não deixa claro qual curso) e preparatório de subespecialidade a R$ 12.897. É o ticket mais alto do cluster. Faturamento do setor: sem dado encontrado.
+- Concorrência: poucos players, muito capitalizados e com corpo docente médico (Medway, Estratégia MED, Medcurso/Medgrupo, MedCof, Sanar, Eu Médico Residente).
+- Custo de marketing: sem dado encontrado. [ESTIMATIVA] Público pequeno e fácil de segmentar, mas disputado por empresas com orçamento muito maior.
+- Riscos: conteúdo médico exige médico como autor; o público avalia com rigor a credencial de quem ensina. Publicidade médica é regulada pelo CFM. Ticket alto aumenta a exposição a reembolso e a reclamação.
+- SWOT: **F** ticket muito alto e público com renda | **Fr** impossível para não médico produzir com honestidade | **O** residência multiprofissional em farmácia (parte dos cerca de 50 mil inscritos não médicos do ENARE), bem menos disputada | **A** players grandes dominam a confiança do público.
+- Nota de viabilidade: **2/10** para residência médica. O subrecorte de residência multiprofissional/farmácia valeria [ESTIMATIVA] 5/10 e se sobrepõe à oportunidade do segmento 1.
+- Fontes: https://agenciabrasil.ebc.com.br/educacao/noticia/2025-08/exame-de-residencia-bate-recorde-com-138-mil-candidatos-inscritos ; https://med.estrategia.com/portal/noticias/enare-2025-2026-bate-novo-recorde-e-ultrapassa-87-mil-inscricoes-para-residencia-medica/ ; https://med.estrategia.com/portal/residencia-medica/enare-2024-2025-confira-a-relacao-candidato-vaga-da-edicao/ ; https://www.medway.com.br/cursos
+
+## 5. Inglês
+- Procura: [DADO] Apenas 5,1% dos brasileiros com 16 anos ou mais declaravam algum conhecimento de inglês (British Council/Data Popular, dado de 2013, antigo). [DADO] Inglês é o idioma mais estudado no Brasil no Duolingo. [DADO] Um lançamento de curso de inglês (Transfer English) relatou faturamento acima de R$ 2 milhões no primeiro mês (nota de imprensa da própria empresa). Ranking Hotmart: sem dado encontrado.
+- Ticket típico: sem dado confiável encontrado para os grandes (Fluency Academy, Mairo Vergara). [ESTIMATIVA] O mercado vai de R$ 97 (cursos gravados simples) a mais de R$ 2.000 por ano (programas com professor).
+- Concorrência: a mais saturada do cluster. Influenciadores com milhões de seguidores, escolas online (Open English, Fluencypass, EF English Live), franquias (CNA, Wizard) e aplicativos gratuitos (Duolingo).
+- Custo de marketing: CPL de educação/idiomas R$ 25 a R$ 80 (fonte fraca). CPA: sem dado encontrado.
+- Riscos: [DADO] grande volume de reclamações no Reclame Aqui contra cursos de inglês por propaganda enganosa ("inglês em 8 semanas"), dificuldade de cancelamento e recusa de reembolso após 7 dias. Promessa de fluência em prazo curto é o padrão do nicho e é o que gera processo e reembolso. Exige fluência real de quem ensina.
+- SWOT: **F** demanda perene e enorme | **Fr** resultado demora e o aluno desiste; perfil não é professor de inglês | **O** recortes profissionais (inglês para entrevista, para profissionais de saúde, para TI) | **A** saturação e histórico de reclamações que derruba a confiança.
+- Nota de viabilidade: **3/10**. Mercado gigante, mas dominado por audiência e autoridade que o perfil não tem.
+- Fontes: https://www.britishcouncil.org.br/sites/default/files/demandas_de_aprendizagempesquisacompleta.pdf ; https://monitormercantil.com.br/transfer-english-fatura-mais-de-r-2-milhoes-no-primeiro-mes/ ; https://www.reclameaqui.com.br/uni-universidade-do-ingles/propaganda-enganosa-sobre-curso-de-ingles-em-8-semanas-com-preco-oculto_GR04rBFltzSU_B1X/ ; https://www.reclameaqui.com.br/rhavi-carneiros-fluency-academy/curso-nao-atende-iniciantes-do-zero-e-empresa-nao-oferece-solucao_tdylb58ylsU-2l4-/ ; https://www.educamaisbrasil.com.br/educacao/noticias/saiba-quais-sao-os-5-idiomas-mais-estudados-no-brasil
+
+## 6. Outros idiomas (espanhol, francês, italiano etc.)
+- Procura: [DADO] No Duolingo, o espanhol é o segundo idioma mais estudado no Brasil, seguido de francês e italiano; o chinês foi o que mais cresceu em 2025 em vários mercados, incluindo o Brasil. Volume de busca e vendas nas plataformas: sem dado encontrado. Demanda ligada a cidadania europeia (italiano) e imigração: sem dado encontrado.
+- Ticket típico: [DADO] Cursos online de espanhol entre R$ 40 e R$ 150 (Jivochat); na Hotmart, o "Español de Verdad" aparece de R$ 397 por R$ 97. Ticket mais baixo que o do inglês.
+- Concorrência: média. Muitos produtores pequenos na Hotmart (cursos básicos, preparação para SIELE/DELE, "chega de portunhol"), sem um player dominante como no inglês.
+- Custo de marketing: sem dado encontrado.
+- Riscos: os mesmos do inglês (promessa de fluência, reembolso), com público menor. Exige fluência de quem ensina.
+- SWOT: **F** menos saturado que o inglês | **Fr** público menor e ticket baixo | **O** espanhol para provas (ENEM, concursos, proficiência) e italiano para cidadania | **A** aplicativos gratuitos resolvem o nível básico.
+- Nota de viabilidade: **3/10**. Ticket baixo e exigência de fluência que o perfil não tem.
+- Fontes: https://www.educamaisbrasil.com.br/educacao/noticias/saiba-quais-sao-os-5-idiomas-mais-estudados-no-brasil ; https://fastcompanybrasil.com/tech/duolingo-revela-os-idiomas-que-mais-cresceram-na-plataforma-em-2025-o-1o-lugar-vai-te-surpreender/ ; https://www.jivochat.com.br/blog/reviews/curso-de-espanhol-online.html ; https://hotmart.com/pt-br/marketplace/produtos/espanol-de-verdad/A84418256B
+
+<!-- Segmentos 7 a 10, tabela-resumo e top 3: em elaboração -->
