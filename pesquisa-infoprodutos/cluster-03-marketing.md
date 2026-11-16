@@ -1,6 +1,6 @@
 # Cluster 03 — Marketing digital e negócios online (mercado brasileiro)
 
-Status: EM ANDAMENTO (versão parcial; segmentos 5 a 10 ainda sem pesquisa).
+Status: CONCLUÍDO (segmentos 1 a 4 de um agente anterior; 5 a 10 completados depois com 12 buscas, sem abrir páginas individualmente).
 Legenda: [DADO] = sustentado por fonte citada | [ESTIMATIVA] = raciocínio do pesquisador.
 Aviso geral: quase todas as fontes de benchmark de anúncios são blogs de agências, ferramentas ou vendedores de curso (interesse comercial). Não foi encontrado ranking público oficial de mais vendidos por nicho na Hotmart/Kiwify.
 
@@ -91,5 +91,48 @@ Aviso geral: quase todas as fontes de benchmark de anúncios são blogs de agên
 - Nota de viabilidade: 6/10 — é o único segmento do cluster com demanda crescente comprovada e que o perfil pode ensinar com honestidade num recorte vertical, mostrando o que de fato usa.
 - Fontes: https://www.em.com.br/economia/2026/03/7373050-inteligencia-artificial-vira-produto-na-economia-criativa-diz-hotmart.html | https://startups.com.br/negocios/inteligencia-artificial/hotmart-aposta-em-ia-para-ampliar-receita-ate-em-produtos-fisicos/ | https://www.em.com.br/mundo-corporativo/2026/09/7507917-uso-de-ia-por-pequenos-negocios-atinge-52-no-brasil.html | https://agenciasebrae.com.br/dados/pequenos-negocios-do-brasil-usam-mais-ia-que-os-norte-americanos-aponta-sebrae/ | https://viniensina.com.br/estatisticas-ia-pequenos-negocios/
 
-## 9 a 10
-Pendente de pesquisa.
+## 9. Vendas pelo WhatsApp
+- Procura: [DADO] Sebrae, 12ª edição do Pulso dos Pequenos Negócios (8.273 respondentes, fev–mar/2026, erro de 1,1%): 82% dos MEIs e micro e pequenas empresas apontam o WhatsApp como principal canal de comunicação e vendas; 73% vendem por canais digitais (estável desde 2021). Ranking de vendas de cursos sobre o tema: sem dado encontrado.
+- Ticket típico: sem dado encontrado.
+- Concorrência: [ESTIMATIVA] média a alta; muitos scripts e cursos genéricos, além de conteúdo gratuito de fornecedores de API e do Sebrae; menos dominado por grandes nomes do que tráfego ou lançamentos.
+- Custo de marketing: sem dado específico encontrado. [ESTIMATIVA] público é dono de pequeno negócio (B2B), normalmente com CPM mais alto que o de público amplo.
+- Riscos: [DADO] fontes de fornecedores (interesse comercial) e matéria de jan/2026 relatam regras mais rígidas da Meta: disparo em massa e ferramentas não oficiais podem levar a bloqueio permanente; recomendação de API oficial, opt-in e templates aprovados. Ensinar disparo/automação "cinza" expõe o aluno a banimento e o produtor a reembolso. LGPD para listas de contatos. [DADO] Manchete de abr/2026: "WhatsApp não salva o caixa: MEIs faturam 12% menos em 2026" (detalhe não verificado), sinal de público com pouco dinheiro. Em farmácia, venda remota e propaganda de medicamentos têm regras da Anvisa [ESTIMATIVA: checar norma vigente].
+- SWOT: **F** público enorme e dor concreta (atender e vender melhor) | **Fr** perfil sem histórico em vendas; ticket tende a ser baixo | **O** kit prático por nicho (scripts, catálogo, etiquetas, respostas rápidas para farmácias e pequeno varejo), dentro das regras oficiais | **A** mudanças de política da Meta e conteúdo gratuito
+- Nota de viabilidade: 5/10 — demanda ampla e comprovada e produto simples de fazer com honestidade (modelos e processos), mas ticket baixo torna difícil chegar a R$ 55 mil com R$ 2 mil/mês de anúncios.
+- Fontes: https://agenciasebrae.com.br/dados/whatsapp-se-consolida-nas-vendas-on-line-enquanto-facebook-e-lojas-proprias-perdem-folego/ | https://metropoles.com/brasil/whatsapp-se-consolida-nas-vendas-on-line-diz-pesquisa-do-sebrae | https://www.em.com.br/mundo-corporativo/2026/01/7343314-empresas-enfrentam-regras-mais-rigidas-no-whatsapp-compliance-vira-prioridade.html | https://digisac.com.br/blog/politica-de-comercio-do-whatsapp-2026 | https://movimentoeconomico.com.br/empreendedorismo/2026/04/17/whatsapp-nao-salva-o-caixa-meis-faturam-12-menos-em-2026/
+
+## 10. Lançamentos e criação de infoprodutos
+- Procura: [DADO] Fórmula de Lançamento (Erico Rocha, Ignição Digital) teria mais de 40 mil alunos segundo o blog da Remessa Online (número não verificado). [DADO] Estudo FGV/Hotmart: 42% dos criadores pesquisados têm produtos digitais como principal fonte de renda (amostra da própria plataforma). Ranking de vendas: sem dado encontrado.
+- Ticket típico: [DADO] Fórmula de Lançamento: cerca de R$ 5.997 à vista em duas fontes (Inteligência Setorial, systeme.io) e "a partir de R$ 1.997" em outra (Remessa Online); o preço varia por edição e não foi confirmado no site oficial. Produtos de entrada: sem dado encontrado.
+- Concorrência: [ESTIMATIVA] muito alta e concentrada em autoridades antigas; é o segmento "curso que ensina a vender curso".
+- Custo de marketing: [DADO] blogs (interesse comercial) citam CPL de R$ 1,50 a R$ 8 para infoprodutos, conversão de 2% a 5% em página de vendas perene, 20% a 40% em página de captura e ROAS de referência acima de 2x a 3x; números divergem entre fontes e não há pesquisa independente. [DADO] Uma fonte indica que lançamento funciona melhor para ticket acima de R$ 500 e sugere funil perene de baixo ticket combinado.
+- Riscos: alegação de renda (Meta e CDC); reputação de "pirâmide de cursos"; exige caso próprio de sucesso; reembolso alto [ESTIMATIVA].
+- SWOT: **F** ticket alto | **Fr** perfil nunca lançou nada, logo não há o que ensinar | **O** documentar o próprio primeiro lançamento e só depois vender o aprendizado | **A** autoridades estabelecidas e desconfiança do público
+- Nota de viabilidade: 2/10 — ensinar a lançar infoproduto sem nunca ter lançado seria desonesto; os benchmarks acima servem mais para planejar o próprio produto do que como nicho.
+- Fontes: https://inteligenciasetorial.com.br/marketing/formula-de-lancamento/ | https://systeme.io/br/blog/formula-lancamento-erico-rocha | https://www.remessaonline.com.br/blog/formula-de-lancamento/ | https://herospark.com/guias/metricas-do-infoprodutor | https://inteligenciasetorial.com.br/marketing/trafego-para-lancamento-digital/ | https://trafius.com.br/blog/trafego-pago-pra-infoproduto-as-taticas-que-funcionam
+
+## Tabela-resumo do cluster
+
+| # | Segmento | Ticket | Concorrência | Risco | Nota |
+|---|----------|--------|--------------|-------|------|
+| 1 | Tráfego pago | R$ 1.497 a R$ 1.997 (referências de topo) | Muito alta | Alto (alegação de renda, autoridade) | 3 |
+| 2 | Marketing de afiliados | sem dado encontrado | Alta | Alto (promessa de renda, CDC) | 2 |
+| 3 | Copywriting | sem dado confiável | Alta | Médio (comoditização por IA) | 3 |
+| 4 | Social media | sem dado encontrado | Alta, pulverizada | Baixo | 4 |
+| 5 | Dropshipping e e-commerce | sem dado confiável | Alta | Alto (reclamações, mudança tributária) | 2 |
+| 6 | Crescimento no Instagram e TikTok | sem dado encontrado | Muito alta | Médio (algoritmo, prova de resultado) | 3 |
+| 7 | YouTube e criação de conteúdo | sem dado encontrado | Alta | Médio a alto (política de conteúdo inautêntico) | 3 |
+| 8 | IA e ChatGPT para negócios | sem dado direto (cerca de R$ 420 por comprador/ano, estimativa) | Alta, fragmentada | Baixo a médio (desatualização) | 6 |
+| 9 | Vendas pelo WhatsApp | sem dado encontrado | Média a alta | Médio (políticas da Meta, LGPD) | 5 |
+| 10 | Lançamentos e criação de infoprodutos | R$ 1.997 a R$ 5.997 (fontes divergem) | Muito alta | Alto (alegação de renda, autoridade) | 2 |
+
+Concorrência e risco são [ESTIMATIVA] do pesquisador, salvo onde a seção cita fonte.
+
+## Os 3 melhores do cluster
+1. **IA e ChatGPT para negócios (6/10)**: único segmento com crescimento documentado (R$ 142,8 mi e 340 mil compradores na Hotmart em 2025; 52% dos pequenos negócios usando IA segundo o Sebrae), sem exigência de diploma e ensinável com honestidade num recorte vertical ligado ao perfil (farmácia/pequeno varejo de saúde).
+2. **Vendas pelo WhatsApp (5/10)**: 82% dos pequenos negócios têm o WhatsApp como principal canal (Sebrae 2026); produto de modelos e processos é simples e honesto, mas o ticket tende a ser baixo.
+3. **Social media e gestão de redes (4/10, nota provisória)**: baixo risco regulatório e possibilidade de packs de templates por nicho; pouca diferenciação e concorrência de IA/Canva.
+
+Conclusão do cluster [ESTIMATIVA]: é um cluster fraco para o perfil. A maioria dos segmentos vende "ganhar dinheiro" e exige resultado próprio como prova. Mesmo os dois melhores só fazem sentido combinados com um recorte de nicho (ex.: IA e WhatsApp para farmácias), e nenhum dado encontrado sustenta que R$ 2.000/mês em anúncios leve a R$ 55 mil de lucro em prazo curto.
+
+Não verificado neste cluster: rankings de mais vendidos por nicho em Hotmart/Kiwify/Eduzz/Monetizze; tickets da maioria dos segmentos; CPM/CPC/CPL/ROAS por vertical; taxas de reembolso; volume de busca; textos oficiais das políticas da Meta, do YouTube e da medida provisória sobre importações (foram usadas fontes secundárias). Nenhuma página foi aberta individualmente; os dados vêm de resumos de resultados de busca.

@@ -1,6 +1,6 @@
 # Cluster 01: Saúde e Emagrecimento (mercado brasileiro de infoprodutos)
 
-Status: RASCUNHO PARCIAL (pesquisa em andamento; segmentos 5 a 10 ainda sem busca própria).
+Status: COMPLETO (10 segmentos). Segmentos 5 a 10 foram pesquisados em uma segunda rodada com 2 buscas por segmento, sem abrir páginas.
 
 Legenda: [DADO] = sustentado por fonte citada. [ESTIMATIVA] = raciocínio do pesquisador, sem fonte direta.
 
@@ -101,5 +101,54 @@ Limitações gerais desta pesquisa:
 - Nota de viabilidade: 2. Vertical contaminado por golpes e fiscalização, e o produto honesto depende de médico.
 - Fontes: https://transparency.meta.com/pt-br/policies/ad-standards/restricted-goods-services/health-wellness/ , https://tecnoblog.net/noticias/76-dos-anuncios-sobre-saude-na-meta-sao-golpe-mostra-estudo/ , https://netlab.eco.ufrj.br/_files/ugd/20ab91_0beae07253194bf78ef2ff3ad556592f.pdf , https://www.abcdacomunicacao.com.br/meta-rejeita-anuncios-de-saude-sexual-da-mulher/ , https://diariodopara.com.br/dr-responde/anvisa-proibe-tadala-pro-max-e-determina-recolhimento-imediato-de-todos-os-lotes/ , https://www.tnh1.com.br/noticia/nid/anvisa-veta-tadala-natural-por-risco-a-saude-entenda-o-que-foi-proibido/ , https://revistaoeste.com/curiosidades/anvisa-proibe-bala-de-tadalafila-metbala/
 
-## 9 a 10
-Pendentes (pesquisa em andamento).
+## 9. Treino em casa e musculação
+- Procura: [DADO] existe um líder consolidado de assinatura, a Queima Diária, descrita pela Forbes em 2019 como "Netflix fitness" com mais de 300 videoaulas. Sem dado encontrado de número de assinantes, de volume de busca ou de vendas de outros produtores.
+- Ticket típico: [DADO] a página do app Queima Diária na App Store lista compras de R$ 29,90, R$ 239,90 e R$ 479,00 (anual); a listagem não identifica o plano de cada valor nem a data. Sem dado encontrado de preços de produtores pequenos.
+- Concorrência: [DADO] um concorrente grande, com aplicativo próprio e nota 8,6/10 no Reclame Aqui nos últimos 6 meses. [ESTIMATIVA] somam-se personal trainers com audiência e conteúdo gratuito no YouTube; saturação alta. Sem dado encontrado sobre outros concorrentes.
+- Custo de marketing: sem dado específico do vertical.
+- Riscos: [DADO] CREF e CONFEF tratam a prescrição de exercício por pessoa sem registro como exercício ilegal da profissão (contravenção, art. 47 do Decreto-Lei 3.688/41, segundo artigos citados) e já denunciaram influenciadores; no Espírito Santo, quatro pessoas foram indiciadas por exercício ilegal e propaganda enganosa. [DADO] O alcance dessa restrição é contestado na Justiça (decisões dizem que conselho não pode restringir profissão sem base em lei). Sem dado encontrado de decisão específica sobre venda de treino gravado por leigo. [DADO] As reclamações mais frequentes contra o líder são renovação automática e dificuldade de cancelar, ponto de atenção do CDC para qualquer assinatura. [DADO] Promessa de perda de peso no anúncio cai na política de saúde da Meta.
+- SWOT: **F** demanda perene; modelo de recorrência comprovado | **Fr** exige profissional de educação física e presença em vídeo; sem audiência | **O** recortes (iniciantes 50+, pós-parto) com profissional parceiro | **A** líder com verba muito maior; fiscalização do CREF
+- Nota de viabilidade: 3. Mercado comprovado, mas com barreira profissional e um concorrente dominante.
+- Fontes: https://forbes.com.br/colunas/2019/02/com-mais-de-300-videoaulas-chegou-a-netflix-fitness/ , https://apps.apple.com/BR/app/id1399707918 , https://www.reclameaqui.com.br/empresa/queima-diaria/lista-reclamacoes/ , https://www.folhavitoria.com.br/policia/quatro-pessoas-sao-indiciadas-por-trabalharem-irregularmente-como-educadores-fisicos-no-es/ , https://diariodonordeste.verdesmares.com.br/opiniao/colaboradores/a-saude-nao-e-um-algoritmo-orientacao-profissional-e-indispensavel-1.3788289 , https://www.diariodepernambuco.com.br/noticia/vidaurbana/2021/09/profissionais-de-educacao-fisica-querem-lei-mais-dura-para-exercicio-i.html , https://www.conjur.com.br/?p=915954
+
+## 10. Yoga e pilates
+- Procura: [DADO] reportagens falam em "boom" do pilates: alta de 277% nas aulas de pilates em uma plataforma de treinos entre 2019 e 2024, e manchete de 2026 cita crescimento de 141% em dois anos (metodologias não verificadas). Sem dado encontrado de número de praticantes no Brasil nem de vendas de infoprodutos.
+- Ticket típico: [DADO] yoga online ao vivo, 1 aula por semana: R$ 116,00 por mês; formação e aprofundamento em yoga: R$ 340,00 por mês em 16 parcelas; formação de professores: R$ 590,00 por mês em 12 mensalidades (links de cobrança Asaas de professores individuais, não ranking). Sem dado encontrado de preço dos cursos gravados na Hotmart.
+- Concorrência: [DADO] muitos cursos na Hotmart, com recortes definidos (iniciantes, gestantes, pilates clássico em casa, anatomia para professores, cursos para instrutores atenderem online). [ESTIMATIVA] produtores são quase sempre instrutores formados; há aulas gratuitas em abundância.
+- Custo de marketing: sem dado específico do vertical.
+- Riscos: [DADO] para yoga, decisões da Justiça Federal (a mais citada de 2004) afastaram a exigência de registro no CREF; são antigas e não foram reverificadas. [DADO] Para pilates, um site de carreiras afirma que só fisioterapeutas e profissionais de educação física podem dar aula (afirmação sem lei citada), e há disputa judicial recente entre Coffito e CONFEF sobre o tema. [ESTIMATIVA] risco de anúncio menor que o do resto do cluster quando não há promessa de emagrecimento ou cura.
+- SWOT: **F** tickets mais altos e recorrência; menos atrito com a Meta | **Fr** exige prática e formação reais; quem não é instrutor não tem o que ensinar | **O** atuar como produtora de um instrutor (coprodução) em recorte específico | **A** conteúdo gratuito; disputa de conselhos no pilates
+- Nota de viabilidade: 3 sozinha (cerca de 5 em coprodução com instrutor). O mercado é melhor que o de emagrecimento, mas o produto depende inteiramente de um especialista.
+- Fontes: https://www.seudinheiro.com/2026/lifestyle/cem-anos-com-corpinho-de-20-pilates-se-reinventa-e-vive-novo-auge-um-seculo-apos-sua-criacao/ , https://ohoje.com/2026/09/03/pilates-vira-febre-entre-jovens-no-brasil-com-aulas-coletivas-e-crescimento-de-141-em-dois-anos/ , https://www.asaas.com/c/14k0e8pqqqyg6wa1 , https://asaas.com/c/ki0b49rb6iyd296y , https://www.asaas.com/c/4xpp2x81x8i1ewtp , https://hotmart.com/pt-br/marketplace/produtos/hagsxd-pilates-on-4c9bq/B84071540Q , https://www.conjur.com.br/2004-jun-24/cref_nao_exigir_anuidade_professores_danca/ , https://jus.com.br/artigos/20669/poder-de-fiscalizacao-do-cref-sobre-a-danca-a-yoga-e-as-artes-marciais-a-luz-do-ordenamento-juridico , https://querobolsa.com.br/revista/quem-pode-dar-aula-de-pilates-saiba-quais-sao-os-profissionais-habilitados , https://www.conjur.com.br/?p=915954
+
+## Tabela-resumo do cluster
+
+| # | Segmento | Ticket | Concorrência | Risco | Nota |
+|---|---|---|---|---|---|
+| 1 | Emagrecimento e dietas | R$ 27 a R$ 97 [ESTIMATIVA] | Muito alta | Alto (CFN, Meta) | 3 |
+| 2 | Receitas fit e low carb | R$ 17 a R$ 47 [DADO] | Alta | Baixo a médio | 5 |
+| 3 | Jejum intermitente | sem dado encontrado | Alta | Alto (CFN, risco de saúde) | 3 |
+| 4 | Diabetes e glicemia | sem dado encontrado | sem dado encontrado | Muito alto (Anvisa, CDC, Meta) | 2 |
+| 5 | Menopausa e saúde da mulher | sem dado encontrado | Média, com médicas à frente | Médio a alto (ato médico) | 5 |
+| 6 | Sono e insônia | sem dado; R$ 17 a R$ 47 [ESTIMATIVA] | Alta em número, fraca em qualidade | Médio | 5 |
+| 7 | Dor nas costas e postura | R$ 37 [DADO, um produto] | Alta | Médio a alto (Crefito/CREF, lesão) | 4 |
+| 8 | Saúde masculina | sem dado encontrado | sem dado encontrado | Muito alto (Anvisa, Meta, golpes) | 2 |
+| 9 | Treino em casa e musculação | R$ 29,90 a R$ 479 [DADO, líder] | Alta, com líder dominante | Médio a alto (CREF) | 3 |
+| 10 | Yoga e pilates | R$ 116 a R$ 590 por mês [DADO, aulas e formações ao vivo] | Alta | Médio | 3 |
+
+## Os 3 melhores do cluster
+
+Aviso: nenhum segmento deste cluster passa de nota 5 para o perfil (iniciante, sem audiência, sem diploma de saúde, R$ 2.000 por mês de anúncio). Os três abaixo são os menos ruins, não boas apostas comprovadas.
+
+1. **Receitas fit e low carb (nota 5).** Único em que um leigo produz algo honesto sem invadir profissão regulamentada, desde que seja livro de culinária sem promessa de emagrecimento. Limite: ticket de R$ 17 a R$ 47 não paga tráfego com CPA de R$ 15 a R$ 80 sem order bump e upsell.
+2. **Sono e insônia (nota 5).** Público muito grande (estimativas de 65% a 72% com queixa de sono) e concorrência de baixa qualidade; higiene do sono é conteúdo comportamental de base pública. Limite: ticket baixo, oferta gratuita e proibição de prometer cura.
+3. **Menopausa e saúde da mulher (nota 5).** Público grande, com renda e mal atendido (44% com sintomas não buscam tratamento); apontado pela Hotmart como subnicho menos saturado. Limite: só é defensável com profissional de saúde parceiro ou escopo estritamente educativo.
+
+[ESTIMATIVA] Com parceria de um profissional habilitado, dor nas costas (assinatura) e menopausa sobem para a faixa de 6; sem parceria, a meta de R$ 55 mil líquidos neste cluster é improvável no curto prazo.
+
+## O que não foi verificado
+- Volume de vendas, ranking por subnicho e taxa de reembolso: sem dado encontrado em nenhum segmento.
+- CPM, CPC, CPA e ROAS por subnicho de saúde: sem dado encontrado; só faixas gerais de blogs de tráfego.
+- Preços dos produtos da Hotmart nos segmentos 3, 4, 5, 6, 8 e 10: não aparecem nos resultados de busca e as páginas não foram abertas.
+- Normas do CFM, Coffito/Crefito e CONFEF aplicáveis a infoproduto de leigo: não foram lidas na fonte; as menções vêm de reportagens e artigos.
+- Números de saúde pública (72% com alteração do sono, 30 milhões no climatério) vêm de reportagens; os estudos originais não foram localizados.
